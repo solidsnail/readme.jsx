@@ -1,13 +1,13 @@
 {
   "name": "readmejsx-website",
   "private": false,
-  "version": "0.6.3",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "tsc --w --outDir ./dist",
     "build": "node src/scripts/build.js",
     "lint": "eslint .",
-    "test": "node --test examples/*/*.test.js"
+    "test": "node --test src/**/*.test.js"
   },
   "dependencies": {
     "readme.jsx": "file://./dist"

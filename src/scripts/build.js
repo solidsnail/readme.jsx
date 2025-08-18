@@ -20,6 +20,7 @@ const main = async () => {
           repository: {
             url: "https://github.com/solidsnail/readme.jsx",
           },
+          bin: "./index.js",
           dependencies: {
           },
           exports: {
@@ -27,6 +28,14 @@ const main = async () => {
             ".": {
               import: "./index.js",
               types: "./index.d.ts",
+            },
+            "./ui/*": {
+              import: "./ui/*/index.js",
+              types: "./ui/*/index.d.ts",
+            },
+            "./ui/index": {
+              import: "./ui/index.js",
+              types: "./ui/index.d.ts",
             },
             "./types": {
               import: "./types.js",
