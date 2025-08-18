@@ -1,17 +1,16 @@
 {
-  "name": "llmini-website",
+  "name": "readmejsx-website",
   "private": false,
   "version": "0.6.3",
   "type": "module",
   "scripts": {
     "dev": "tsc --w --outDir ./dist",
     "build": "node src/scripts/build.js",
-    "refresh-config": "node src/scripts/refresh-config.js",
     "lint": "eslint .",
     "test": "node --test examples/*/*.test.js"
   },
   "dependencies": {
-    "llmini.js": "file://./dist"
+    "readme.jsx": "file://./dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

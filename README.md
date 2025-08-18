@@ -2,8 +2,6 @@
   <img src="https://raw.githubusercontent.com/solidsnail/readme.jsx/refs/heads/main/assets/logo.png" width="300" />
 </p>
 
-# Readme.jsx
-
 **readme.jsx** is a compiler that generates the README.md file from a jsx file
 
 <p align="center">

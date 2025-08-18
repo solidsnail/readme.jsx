@@ -10,32 +10,19 @@ const main = async () => {
       "dist/package.json",
       JSON.stringify(
         {
-          name: "llmini.js",
+          name: "readme.jsx",
           description:
-            "A modular TypeScript SDK that enables AI/ML capabilities directly in the browser or Node.js",
+            "A jsx to README.md compiler",
           license: "MIT",
           type: "module",
           private: false,
           version: packageJson.version,
           repository: {
-            url: "https://github.com/solidsnail/llmini.js",
+            url: "https://github.com/solidsnail/readme.jsx",
           },
           dependencies: {
-            "@huggingface/transformers": "^3.7.1",
-            "kokoro-js": "^1.2.1",
-            outetts: "^0.2.0",
-            wavefile: "^11.0.0",
           },
           exports: {
-            "./categories/*": {
-              import: "./categories/*/index.js",
-              types: "./categories/*/index.d.ts",
-            },
-            "./categories/*/model.js": "./categories/*/model.js",
-            "./categories/index.js": {
-              import: "./categories/index.js",
-              types: "./categories/index.d.ts",
-            },
             "./themes/*.css": "./themes/*.css",
             ".": {
               import: "./index.js",
