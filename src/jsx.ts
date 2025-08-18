@@ -1,6 +1,6 @@
 
 function propsToString(props: Record<string, any>): string {
-    return Object.entries(props)
+    return Object.entries(props || {})
         .map(([key, value]) => {
             if (typeof value === "boolean") {
                 return value ? key : "";
@@ -17,7 +17,6 @@ function propsToString(props: Record<string, any>): string {
 
 const createElement = (tagName: undefined | string | Function, props: Record<string, any>, ...childs: any[]) => {
     const children = childs.flat().join(""); // Flatten and join children
-    console.log({ tagName: tagName?.toString(), props, children })
     switch (typeof tagName) {
         case "string":
             if (["img"].includes(tagName as string)) {
