@@ -7,7 +7,9 @@ import { Italic } from "./italic.js";
 import { StrikeThrough } from "./strike-through.js";
 import { Boxed } from "./boxed.js";
 import { Sub } from "./sub.js";
+import { List, } from "./list.js";
+import { Hr, } from "./hr.js";
 
 export const UI = {
-    Center, Sub, Image, Bold, Br, Heading, Italic, StrikeThrough, Boxed
+    Hr, List, Center, Sub, Image, Bold, Br, Heading, Italic, StrikeThrough, Boxed
 }

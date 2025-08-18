@@ -7,7 +7,7 @@ declare global {
             td: {}
             sub: {}
             sup: {}
-            p: { align: string }
+            p: { align: "left" | "center" | "right" }
             img: {
                 src: string
                 width?: string
