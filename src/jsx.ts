@@ -15,25 +15,29 @@ function propsToString(props: Record<string, any>): string {
 }
 
 
-const createElement = (tagName: string | Function, props: Record<string, any>, children: string) => {
-    console.log({ props });
-    console.log({ children })
-
+const createElement = (tagName: undefined | string | Function, props: Record<string, any>, children: string) => {
+    console.log({ tagName, props, children })
     switch (typeof tagName) {
         case "string":
-            if (["img"].includes(tagName)) {
+            if (["img"].includes(tagName as string)) {
                 return `<${tagName} ${propsToString(props)} />`
             }
             return `<${tagName} ${propsToString(props)}>${children}</${tagName}>`
-
+        case "undefined":
+            return children
         default:
-            return tagName({
+            return (tagName as Function)({
                 ...(props || {}),
                 children
             })
     }
 }
 
+const Fragment = ({ children }) => {
+    return children
+}
+
 export {
-    createElement
+    createElement,
+    Fragment
 }

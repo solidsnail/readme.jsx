@@ -40,6 +40,7 @@ export function transpileJSX(filePath: string): string {
 const content = "import * as Readme from \"./dist/jsx.js\";\n\n" + transpileJSX(filepath)
 fs.writeFileSync("./README.js", content, "utf-8")
 import(new URL("../README.js", import.meta.url).toString()).then(mod => {
-    console.log(mod.default)
+    const compiled = mod.default
     fs.rmSync("./README.js")
+    fs.writeFileSync("./TEST.md", compiled, "utf-8")
 })

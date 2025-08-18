@@ -5,6 +5,7 @@ declare global {
             p: { align: string }
             img: {
                 src: string
+                width?: string
             }
         }
     }
