@@ -1,3 +1,3 @@
 export const Hr = () => {
-    return "---"
+    return "\n---\n"
 }
