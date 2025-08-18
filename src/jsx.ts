@@ -15,8 +15,9 @@ function propsToString(props: Record<string, any>): string {
 }
 
 
-const createElement = (tagName: undefined | string | Function, props: Record<string, any>, children: string) => {
-    console.log({ tagName, props, children })
+const createElement = (tagName: undefined | string | Function, props: Record<string, any>, ...childs: any[]) => {
+    const children = childs.flat().join(""); // Flatten and join children
+    console.log({ tagName: tagName?.toString(), props, children })
     switch (typeof tagName) {
         case "string":
             if (["img"].includes(tagName as string)) {
@@ -33,7 +34,7 @@ const createElement = (tagName: undefined | string | Function, props: Record<str
     }
 }
 
-const Fragment = ({ children }) => {
+const Fragment = ({ children }: { children: string }) => {
     return children
 }
 
