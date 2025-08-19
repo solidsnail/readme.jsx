@@ -4,5 +4,5 @@ export const Tasks = ({ list }: {
         done: boolean
     }[]
 }) => {
-    return "\n" + list.map(item => `- [${item.done ? "x" : " "}] ${item.content}`).join("\n")
+    return "\n\n" + list.map(item => `- [${item.done ? "x" : " "}] ${item.content}`).join("\n")
 }
