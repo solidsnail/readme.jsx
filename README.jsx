@@ -118,7 +118,7 @@ const NumberedHeading = ({ text, number, width = "100%" }) => {
         style={{
             container: {
                 width: "100%",
-                height: "60px",
+                height: "40px",
                 display: "flex",
                 alignItems: "center",
                 margin: "24px 0",
@@ -126,8 +126,8 @@ const NumberedHeading = ({ text, number, width = "100%" }) => {
                 animation: "fadeIn 0.8s ease-out"
             },
             circle: {
-                width: "40px",
-                height: "40px",
+                width: "20px",
+                height: "20px",
                 borderRadius: "50%",
                 background: "linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
                 backgroundSize: "300% 300%",
