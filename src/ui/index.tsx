@@ -18,6 +18,7 @@ import { Accordion } from "./accordion.js";
 import { Alert } from "./alert.js";
 import { Emoji } from "./emoji.js";
 import { Svg } from "./svg.js";
+import { Badge } from "./badge.js";
 
 export const UI = {
     Alert,
@@ -39,5 +40,6 @@ export const UI = {
     Accordion,
     Tasks,
     Emoji,
-    Svg
+    Svg,
+    Badge
 }

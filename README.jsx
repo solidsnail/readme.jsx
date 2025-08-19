@@ -232,6 +232,9 @@ export default <>
 
     <UI.Br />
     <UI.Br />
+    <UI.Badge leftText="The badge" rightText="Cool" leftColor="yellow" rightColor="red" />
+    <UI.Br />
+    <UI.Br />
 
     <UI.Alert type="NOTE" text="This markdown has been generated using readme.jsx" />
 

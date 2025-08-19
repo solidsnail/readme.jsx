@@ -1,5 +1,7 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" width="300px" /></p>
 
+<img src="https://img.shields.io/badge/The%20badge-Cool-red?style=for-the-badge&labelColor=yellow&color=red" alt="The badge" />
+
 > [!NOTE]
 > This markdown has been generated using readme.jsx
 
