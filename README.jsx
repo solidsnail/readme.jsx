@@ -87,6 +87,74 @@ const Logo = () => <UI.Svg
 </div>`}
 />
 
+const NumberedHeading = ({ text, number, width = "100%" }) => {
+    const url = `./assets/headings/numbered-heading-${number}.svg`;
+
+    return <UI.Svg
+        url={url}
+        width={width}
+        viewBox="0 0 800 100"
+        keyframes={[
+            {
+                name: "gradientShift",
+                frames: [
+                    { percent: "0%", style: { backgroundPosition: "0% 50%" } },
+                    { percent: "50%", style: { backgroundPosition: "100% 50%" } },
+                    { percent: "100%", style: { backgroundPosition: "0% 50%" } }
+                ]
+            },
+            {
+                name: "fadeIn",
+                frames: [
+                    { percent: "0%", style: { opacity: "0", transform: "translateY(20px)" } },
+                    { percent: "100%", style: { opacity: "1", transform: "translateY(0)" } }
+                ]
+            }
+        ]}
+        style={{
+            container: {
+                width: "100%",
+                height: "60px",
+                display: "flex",
+                alignItems: "center",
+                margin: "24px 0",
+                background: "transparent",
+                animation: "fadeIn 0.8s ease-out"
+            },
+            circle: {
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                background: "linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
+                backgroundSize: "300% 300%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginRight: "16px",
+                animation: "gradientShift 3s ease infinite"
+            },
+            number: {
+                color: "white",
+                fontSize: "18px",
+                fontWeight: "bold",
+                fontFamily: "system-ui, sans-serif"
+            },
+            text: {
+                fontSize: "24px",
+                fontWeight: "600",
+                color: "#2c3e50",
+                fontFamily: "system-ui, sans-serif",
+                margin: "0"
+            }
+        }}
+        html={`<div id="container">
+    <div id="circle">
+        <span id="number">${number}</span>
+    </div>
+    <h2 id="text">${text}</h2>
+</div>`}
+    />
+}
 
 export default <>
     <UI.Center>
@@ -100,13 +168,13 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="🚀 What is README.jsx?" order={2} />
+    <NumberedHeading text="What is README.jsx?" number={1} />
 
-    README.jsx is a powerful JSX-to-Markdown compiler that revolutionizes how you write documentation. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to create beautiful, maintainable README files.
+    README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
 
     <UI.Br />
 
-    <UI.Heading text="✨ Features" order={2} />
+    <NumberedHeading text="Features" number={2} />
 
     <UI.List list={[
         "📝 Write README files using JSX syntax",
@@ -121,13 +189,13 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="📦 Installation" order={2} />
+    <NumberedHeading text="Usage" number={3} />
 
-    <UI.Code code={`npm install readme.jsx`} lang="bash" />
+    <UI.Code code={`npx readme.jsx ./README.jsx`} lang="bash" />
 
     <UI.Br />
 
-    <UI.Heading text="🏃‍♂️ Quick Start" order={2} />
+    <NumberedHeading text="Quick Start" number={4} />
 
     Create a <UI.Code code="README.jsx" inline /> file:
 
@@ -149,11 +217,11 @@ export default <>
 
     Compile to Markdown:
 
-    <UI.Code code="npx ./README.jsx" lang="bash" />
+    <UI.Code code="npx readme.jsx ./README.jsx" lang="bash" />
 
     <UI.Br />
 
-    <UI.Heading text="🧩 Available Components" order={2} />
+    <NumberedHeading text="Available Components" number={5} />
 
     <UI.Accordion title="Text Formatting">
         <UI.List list={[
@@ -204,7 +272,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="🎨 Advanced Example: Animated SVG" order={2} />
+    <NumberedHeading text="Advanced Example: Animated SVG" number={6} />
 
     Create stunning animated graphics directly in your README:
 
@@ -232,7 +300,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="📋 Example: Rich Table" order={2} />
+    <NumberedHeading text="Example: Rich Table" number={7} />
 
     <UI.Table rows={[
         [
@@ -259,7 +327,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="⚙️ Configuration" order={2} />
+    <NumberedHeading text="Configuration" number={8} />
 
     Add these scripts to your <UI.Code code="package.json" inline />:
 
@@ -272,7 +340,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.Heading text="🎯 Why Choose README.jsx?" order={2} />
+    <NumberedHeading text="Why Choose README.jsx?" number={9} />
 
     <UI.Boxed>
         <UI.Center>
@@ -312,8 +380,8 @@ console.log("Hello");
 
     <UI.Br />
 
-    <UI.Heading text="🏆 Benefits" order={3} />
-
+    <NumberedHeading text="Benefits" number={10} />
+    <UI.Br />
     <UI.List list={[
         "🔍 **Type Safety** - Catch errors at compile time",
         "🔧 **IDE Support** - Full IntelliSense and autocomplete",
@@ -326,7 +394,7 @@ console.log("Hello");
 
     <UI.Br />
 
-    <UI.Heading text="🤝 Contributing" order={2} />
+    <NumberedHeading text="Contributing" number={11} />
 
     We welcome contributions! Here's how you can help:
 
@@ -341,7 +409,7 @@ console.log("Hello");
 
     <UI.Br />
 
-    <UI.Heading text="📄 License" order={2} />
+    <NumberedHeading text="License" number={12} />
 
     This project is licensed under the MIT License - see the LICENSE file for details.
 

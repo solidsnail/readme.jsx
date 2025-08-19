@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 100">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+@keyframes underlineGrow {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+#container { width: 100%; height: 80px; display: flex; align-items: center; justify-content: flex-start; margin: 20px 0; background: transparent; position: relative; }
+#heading { font-size: 40px; font-weight: bold; font-family: system-ui, -apple-system, sans-serif; margin: 0px; padding: 10px 0; position: relative; background: linear-gradient(90deg, #6a82fb, #fc5c7d, #05dfd7); color: transparent; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: slideInFromLeft 0.8s ease-out, float 4s ease-in-out infinite 2s; }
+#underline { position: absolute; bottom: 5px; left: 0px; height: 3px; background: linear-gradient(90deg, #6a82fb, #fc5c7d, #05dfd7); border-radius: 2px; animation: underlineGrow 1.2s ease-out 1s forwards; width: 0%; }
+#icon { font-size: 32px; margin-right: 12px; display: inline-block; }
+      </style>
+<div id="container">
+    <h2 id="heading">
+        <span id="icon">⭐</span>
+        Getting Started
+        <div id="underline"></div>
+    </h2>
+</div>
+    </div>
+  </foreignObject>
+</svg>

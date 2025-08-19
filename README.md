@@ -3,11 +3,8 @@
 > [!TIP]
 > Write your README files using JSX syntax and compile them to beautiful Markdown!
 
-## 🚀 What is README.jsx?
-
-README.jsx is a powerful JSX-to-Markdown compiler that revolutionizes how you write documentation. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to create beautiful, maintainable README files.
-
-## ✨ Features
+<img src="./assets/headings/numbered-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
+<img src="./assets/headings/numbered-heading-2.svg" width="100%" />
 
 - 📝 Write README files using JSX syntax
 - 🎨 Rich UI components for better documentation
@@ -18,15 +15,13 @@ README.jsx is a powerful JSX-to-Markdown compiler that revolutionizes how you wr
 - 🎯 Type-safe component props
 - ⚡ Fast compilation to standard Markdown
 
-## 📦 Installation
+<img src="./assets/headings/numbered-heading-3.svg" width="100%" />
 
 ```bash
-npm install readme.jsx
+npx readme.jsx ./README.jsx
 ```
 
-## 🏃‍♂️ Quick Start
-
-Create a `README.jsx` file:
+<img src="./assets/headings/numbered-heading-4.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx
 import { UI } from "readme.jsx";
@@ -47,14 +42,13 @@ export default (
 Compile to Markdown:
 
 ```bash
-npx ./README.jsx
+npx readme.jsx ./README.jsx
 ```
 
-## 🧩 Available Components
+<img src="./assets/headings/numbered-heading-5.svg" width="100%" /><details ><summary >Text Formatting</summary>
 
-<details ><summary >Text Formatting</summary>
 - **Bold** - **Bold text**
-- *Italic* - *Italic text*
+- _Italic_ - _Italic text_
 - ~~Strikethrough~~ - ~~Strikethrough text~~
 - `inline code` - Inline code
 </details><details ><summary >Layout Components</summary>
@@ -80,10 +74,7 @@ npx ./README.jsx
 - <UI.Sub> - Subscript text
 - <UI.Sup> - Superscript text
 </details>
-
-## 🎨 Advanced Example: Animated SVG
-
-Create stunning animated graphics directly in your README:
+<img src="./assets/headings/numbered-heading-6.svg" width="100%" />Create stunning animated graphics directly in your README:
 
 ```jsx
 <UI.Svg
@@ -109,15 +100,12 @@ Create stunning animated graphics directly in your README:
 />
 ```
 
-## 📋 Example: Rich Table
+<img src="./assets/headings/numbered-heading-7.svg" width="100%" /><table ><tr ><th width="30%">**Component**</th><th width="50%">**Description**</th><th width="20%">**Example**</th></tr><tr ><td >`<UI.Alert>`</td><td >GitHub-style callout boxes</td><td >> [!NOTE]
 
-<table ><tr ><th width="30%">**Component**</th><th width="50%">**Description**</th><th width="20%">**Example**</th></tr><tr ><td >`<UI.Alert>`</td><td >GitHub-style callout boxes</td><td >> [!NOTE]
 > Like this!</td></tr><tr ><td >`<UI.Tasks>`</td><td >Interactive task lists</td><td >- [x] Done
+
 - [ ] Todo</td></tr><tr ><td >`<UI.Kbd>`</td><td >Keyboard key styling</td><td >Press Ctrl+C</td></tr></table>
-
-## ⚙️ Configuration
-
-Add these scripts to your `package.json`:
+      <img src="./assets/headings/numbered-heading-8.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json
 {
@@ -128,9 +116,7 @@ Add these scripts to your `package.json`:
 }
 ```
 
-## 🎯 Why Choose README.jsx?
-
-<table ><tr ><td ><p align="center">**Traditional Markdown**
+<img src="./assets/headings/numbered-heading-9.svg" width="100%" /><table ><tr ><td ><p align="center">**Traditional Markdown**
 
 ````markdown
 # My Project
@@ -162,8 +148,7 @@ console.log("Hello");
 ````
 
 </p></td></tr></table>
-
-### 🏆 Benefits
+<img src="./assets/headings/numbered-heading-10.svg" width="100%" />
 
 - 🔍 **Type Safety** - Catch errors at compile time
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
@@ -173,9 +158,7 @@ console.log("Hello");
 - ⚡ **Fast** - Efficient compilation to standard Markdown
 - 🧪 **Testable** - Unit test your documentation components
 
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
+<img src="./assets/headings/numbered-heading-11.svg" width="100%" />We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -183,10 +166,7 @@ We welcome contributions! Here's how you can help:
 - [ ] ✅ Write tests
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+      <img src="./assets/headings/numbered-heading-12.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 

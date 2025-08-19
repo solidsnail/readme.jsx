@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 100">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+@keyframes underlineGrow {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px rgba(106, 130, 251, 0.5); transform: scale(1); }
+  50% { text-shadow: 0 0 20px rgba(106, 130, 251, 0.8), 0 0 30px rgba(252, 92, 125, 0.6); transform: scale(1.02); }
+  100% { text-shadow: 0 0 5px rgba(106, 130, 251, 0.5); transform: scale(1); }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+#container { width: 100%; height: 80px; display: flex; align-items: center; justify-content: flex-start; margin: 20px 0; background: transparent; position: relative; }
+#heading { font-size: 40px; font-weight: bold; font-family: system-ui, -apple-system, sans-serif; margin: 0px; padding: 10px 0; position: relative; background: none; color: #9b59b6; background-clip: border-box; -webkit-background-clip: border-box; -webkit-text-fill-color: unset; animation: slideInFromRight 0.8s ease-out, glowPulse 2s ease-in-out infinite 1s; }
+#underline { position: absolute; bottom: 5px; left: 0px; height: 3px; background: #9b59b6; border-radius: 2px; animation: underlineGrow 1.2s ease-out 1s forwards; width: 0%; }
+#icon { font-size: 32px; margin-right: 12px; display: inline-block; }
+      </style>
+<div id="container">
+    <h2 id="heading">
+        <span id="icon">⭐</span>
+        Installation
+        <div id="underline"></div>
+    </h2>
+</div>
+    </div>
+  </foreignObject>
+</svg>
