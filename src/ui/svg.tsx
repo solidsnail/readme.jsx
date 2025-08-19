@@ -3,7 +3,7 @@ import { writeDeep } from "../helpers.js";
 import { Image } from "./image.js";
 
 type CSSValue = string | number;
-type CSSRules = Record<string, CSSValue>;
+type CSSRules = CSSStyleDeclaration;
 type StyleMap = Record<string, CSSRules>;
 type Keyframe = {
     name: string;

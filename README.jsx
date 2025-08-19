@@ -4,41 +4,24 @@ export default <>
         url="./assets/readme-svg/logo.svg"
         keyframes={[
             {
-                name: "rotate",
+                name: "textWave",
                 frames: [
                     {
                         percent: "0%",
                         style: {
-                            transform: "rotate(3deg)"
-                        }
-                    },
-                    {
-                        percent: "100%",
-                        style: {
-                            transform: "rotate(-3deg)"
-                        }
-                    },
-                ]
-            },
-            {
-                name: "gradientBackground",
-                frames: [
-                    {
-                        percent: "0%",
-                        style: {
-                            backgroundPosition: "0% 0%"
+                            transform: "translateY(0px)"
                         }
                     },
                     {
                         percent: "50%",
                         style: {
-                            backgroundPosition: "100% 50%"
+                            transform: "translateY(-10px)"
                         }
                     },
                     {
                         percent: "100%",
                         style: {
-                            backgroundPosition: "0% 50%"
+                            transform: "translateY(0px)"
                         }
                     },
                 ]
@@ -48,12 +31,6 @@ export default <>
                 frames: [
                     {
                         percent: "0%",
-                        style: {
-                            opacity: "0"
-                        }
-                    },
-                    {
-                        percent: "66%",
                         style: {
                             opacity: "0"
                         }
@@ -69,7 +46,7 @@ export default <>
         ]}
         style={{
             container: {
-                fontFamily: 'system-ui ',
+                fontFamily: 'system-ui',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -77,25 +54,24 @@ export default <>
                 margin: 0,
                 width: '100%',
                 height: 400,
-                background: 'linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7)',
-                backgroundSize: '600% 400%',
-                animation: 'gradientBackground 10s ease infinite',
-                borderRadius: 10,
-                color: 'white',
+                background: 'transparent', // ✅ removed gradient background
+                color: '#111',             // dark text since no background
                 textAlign: 'center',
             },
             title: {
                 fontSize: "80px",
+                fontWeight: "bold",
                 lineHeight: 1.3,
                 letterSpacing: 5,
                 textTransform: 'uppercase',
-                textShadow: '0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef, 0 4px 0 #efefef, 0 12px 5px rgba(0, 0, 0, 0.1)',
-                animation: 'rotate ease-in-out 1s infinite alternate',
+                animation: 'textWave 2s ease-in-out infinite, fadeIn 2s ease forwards',
             },
             subtitle: {
-                fontSize: "40px",
-                textShadow: '0 1px 0 #efefef',
-                animation: '5s ease 0s normal forwards 1 fadeIn',
+                fontSize: "32px",
+                marginTop: "10px",
+                fontFamily: "monospace",
+                opacity: 0,
+                animation: 'fadeIn 3s ease forwards 1s',
             }
         }}
         html={`<div id="container">
@@ -103,6 +79,7 @@ export default <>
     <p id="subtitle">The jsx to md compiler</p>
 </div>`}
     />
+
     <UI.Br /><UI.Br />
     MIT License. See the  <UI.Link link="./LICENSE" description="LICENSE" />
     <UI.Br />
