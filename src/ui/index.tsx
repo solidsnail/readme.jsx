@@ -17,6 +17,7 @@ import { Kbd } from "./kbd.js";
 import { Accordion } from "./accordion.js";
 import { Alert } from "./alert.js";
 import { Emoji } from "./emoji.js";
+import { Svg } from "./svg.js";
 
 export const UI = {
     Alert,
@@ -37,5 +38,6 @@ export const UI = {
     Kbd,
     Accordion,
     Tasks,
-    Emoji
+    Emoji,
+    Svg
 }
