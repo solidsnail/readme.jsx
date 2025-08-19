@@ -139,7 +139,7 @@ const NumberedHeading = ({ text, number, width = "100%" }) => {
             },
             number: {
                 color: "white",
-                fontSize: "18px",
+                fontSize: "12px",
                 fontWeight: "bold",
                 fontFamily: "system-ui, sans-serif"
             },
