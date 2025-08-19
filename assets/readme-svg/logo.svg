@@ -37,7 +37,7 @@
       </style>
 <div id="container">
     <h1 id="title">README.jsx</h1>
-    <p id="subtitle">The jsx to md compiler</p>
+    <p id="subtitle">The JSX to Markdown compiler</p>
 </div>
     </div>
   </foreignObject>

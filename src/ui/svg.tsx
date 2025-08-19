@@ -56,10 +56,12 @@ export const Svg = ({
     url,
     style,
     html,
+    viewBox = "0 0 800 400",
     keyframes = [],
 }: {
     url: string,
     width?: string,
+    viewBox?: string,
     keyframes?: Keyframe[];
     style: StyleMap;
     html: string;
@@ -85,7 +87,7 @@ ${frames
         })
         .join("\n");
 
-    const code = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 400">
+    const code = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="${viewBox}">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>

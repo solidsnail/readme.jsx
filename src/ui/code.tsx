@@ -2,5 +2,5 @@ export const Code = ({ code, inline = false, lang = "js" }: { code: string; inli
     if (inline) {
         return `\`${code}\``
     }
-    return `\`\`\`${lang}\n${code}\n\`\`\``
+    return `\n\n\`\`\`${lang}\n${code}\n\`\`\`\n\n`
 }
