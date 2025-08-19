@@ -312,11 +312,39 @@ export default <>
                 type: "td",
             },
             {
-                content: <UI.Code lang="jsx" inline code="<UI.Alert type='NOTE' text='Important info' />" />,
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='NOTE' text='Note info' />" />,
                 type: "td",
             },
             {
-                content: <UI.Alert type='NOTE' text='Important info' />,
+                content: <UI.Alert type='NOTE' text='Note info' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Alert Important",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='IMPORTANT' text='Important info' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Alert type='IMPORTANT' text='Important info' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Alert Caution",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='CAUTION' text='Cautious note' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Alert type='CAUTION' text='Important info' />,
                 type: "td",
             },
         ],

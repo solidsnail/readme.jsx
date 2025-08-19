@@ -171,11 +171,37 @@ Alert Note
 
 </td><td >
 
-`<UI.Alert type='NOTE' text='Important info' />`
+`<UI.Alert type='NOTE' text='Note info' />`
 
 </td><td >
 
 > [!NOTE]
+> Note info
+
+</td></tr><tr ><td >
+
+Alert Important
+
+</td><td >
+
+`<UI.Alert type='IMPORTANT' text='Important info' />`
+
+</td><td >
+
+> [!IMPORTANT]
+> Important info
+
+</td></tr><tr ><td >
+
+Alert Caution
+
+</td><td >
+
+`<UI.Alert type='CAUTION' text='Cautious note' />`
+
+</td><td >
+
+> [!CAUTION]
 > Important info
 
 </td></tr><tr ><td >
