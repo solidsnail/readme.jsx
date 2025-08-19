@@ -1,7 +1,5 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" width="300px" /></p>
 
-<img src="https://img.shields.io/badge/The%20badge-Cool-red?style=for-the-badge&labelColor=yellow&color=red" alt="The badge" />
-
 > [!NOTE]
 > This markdown has been generated using readme.jsx
 
@@ -290,6 +288,18 @@ Boxed Content
 </td><td >
 
 <table ><tr ><td >Boxed Text</td></tr></table>
+
+</td></tr><tr ><td >
+
+Badge
+
+</td><td >
+
+`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="yellow" rightColor="red" />`
+
+</td><td >
+
+<img src="https://img.shields.io/badge/The%20badge-Suffix-red?style=for-the-badge&labelColor=yellow&color=red" alt="The badge" />
 
 </td></tr></table>
 <img src="./assets/readme-svg/headings/numbered-heading-6.svg" width="100%" />

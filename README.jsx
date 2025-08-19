@@ -232,9 +232,6 @@ export default <>
 
     <UI.Br />
     <UI.Br />
-    <UI.Badge leftText="The badge" rightText="Cool" leftColor="yellow" rightColor="red" />
-    <UI.Br />
-    <UI.Br />
 
     <UI.Alert type="NOTE" text="This markdown has been generated using readme.jsx" />
 
@@ -576,6 +573,20 @@ export default <>
             },
             {
                 content: <UI.Boxed>Boxed Text</UI.Boxed>,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Badge",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code={`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="yellow" rightColor="red" />`} />,
+                type: "td",
+            },
+            {
+                content: <UI.Badge leftText="The badge" rightText="Suffix" leftColor="yellow" rightColor="red" />,
                 type: "td",
             },
         ],
