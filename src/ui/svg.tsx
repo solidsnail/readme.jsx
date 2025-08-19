@@ -53,13 +53,13 @@ function normalizeSelector(selector: string) {
 
 export const Svg = ({
     width,
-    url,
+    distUrl,
     style,
     html,
     viewBox = "0 0 800 400",
     keyframes = [],
 }: {
-    url: string,
+    distUrl: string,
     width?: string,
     viewBox?: string,
     keyframes?: Keyframe[];
@@ -99,6 +99,6 @@ ${html}
     </div>
   </foreignObject>
 </svg>`;
-    writeDeep(url, code);
-    return <Image width={width} src={url} />;
+    writeDeep(distUrl, code);
+    return <Image width={width} src={distUrl} />;
 };
