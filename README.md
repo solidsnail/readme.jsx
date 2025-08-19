@@ -3,8 +3,8 @@
 > [!TIP]
 > Write your README files using JSX syntax and compile them to beautiful Markdown!
 
-<img src="./assets/headings/numbered-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
-<img src="./assets/headings/numbered-heading-2.svg" width="100%" />
+<img src="./assets/readme-svg/headings/numbered-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
+<img src="./assets/readme-svg/headings/numbered-heading-2.svg" width="100%" />
 
 - 📝 Write README files using JSX syntax
 - 🎨 Rich UI components for better documentation
@@ -15,13 +15,13 @@
 - 🎯 Type-safe component props
 - ⚡ Fast compilation to standard Markdown
 
-<img src="./assets/headings/numbered-heading-3.svg" width="100%" />
+<img src="./assets/readme-svg/headings/numbered-heading-3.svg" width="100%" />
 
 ```bash
 npx readme.jsx ./README.jsx
 ```
 
-<img src="./assets/headings/numbered-heading-4.svg" width="100%" />Create a `README.jsx` file:
+<img src="./assets/readme-svg/headings/numbered-heading-4.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx
 import { UI } from "readme.jsx";
@@ -45,7 +45,7 @@ Compile to Markdown:
 npx readme.jsx ./README.jsx
 ```
 
-<img src="./assets/headings/numbered-heading-5.svg" width="100%" /><details ><summary >Text Formatting</summary>
+<img src="./assets/readme-svg/headings/numbered-heading-5.svg" width="100%" /><details ><summary >Text Formatting</summary>
 
 - **Bold** - **Bold text**
 - _Italic_ - _Italic text_
@@ -74,7 +74,7 @@ npx readme.jsx ./README.jsx
 - <UI.Sub> - Subscript text
 - <UI.Sup> - Superscript text
 </details>
-<img src="./assets/headings/numbered-heading-6.svg" width="100%" />Create stunning animated graphics directly in your README:
+<img src="./assets/readme-svg/headings/numbered-heading-6.svg" width="100%" />Create stunning animated graphics directly in your README:
 
 ```jsx
 <UI.Svg
@@ -100,12 +100,12 @@ npx readme.jsx ./README.jsx
 />
 ```
 
-<img src="./assets/headings/numbered-heading-7.svg" width="100%" /><table ><tr ><th width="30%">**Component**</th><th width="50%">**Description**</th><th width="20%">**Example**</th></tr><tr ><td >`<UI.Alert>`</td><td >GitHub-style callout boxes</td><td >> [!NOTE]
+<img src="./assets/readme-svg/headings/numbered-heading-7.svg" width="100%" /><table ><tr ><th width="30%">**Component**</th><th width="50%">**Description**</th><th width="20%">**Example**</th></tr><tr ><td >`<UI.Alert>`</td><td >GitHub-style callout boxes</td><td >> [!NOTE]
 
 > Like this!</td></tr><tr ><td >`<UI.Tasks>`</td><td >Interactive task lists</td><td >- [x] Done
 
 - [ ] Todo</td></tr><tr ><td >`<UI.Kbd>`</td><td >Keyboard key styling</td><td >Press Ctrl+C</td></tr></table>
-      <img src="./assets/headings/numbered-heading-8.svg" width="100%" />Add these scripts to your `package.json`:
+      <img src="./assets/readme-svg/headings/numbered-heading-8.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json
 {
@@ -116,7 +116,7 @@ npx readme.jsx ./README.jsx
 }
 ```
 
-<img src="./assets/headings/numbered-heading-9.svg" width="100%" /><table ><tr ><td ><p align="center">**Traditional Markdown**
+<img src="./assets/readme-svg/headings/numbered-heading-9.svg" width="100%" /><table ><tr ><td ><p align="center">**Traditional Markdown**
 
 ````markdown
 # My Project
@@ -148,7 +148,7 @@ console.log("Hello");
 ````
 
 </p></td></tr></table>
-<img src="./assets/headings/numbered-heading-10.svg" width="100%" />
+<img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />
 
 - 🔍 **Type Safety** - Catch errors at compile time
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
@@ -158,7 +158,7 @@ console.log("Hello");
 - ⚡ **Fast** - Efficient compilation to standard Markdown
 - 🧪 **Testable** - Unit test your documentation components
 
-<img src="./assets/headings/numbered-heading-11.svg" width="100%" />We welcome contributions! Here's how you can help:
+<img src="./assets/readme-svg/headings/numbered-heading-11.svg" width="100%" />We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -166,7 +166,7 @@ console.log("Hello");
 - [ ] ✅ Write tests
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
-      <img src="./assets/headings/numbered-heading-12.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+      <img src="./assets/readme-svg/headings/numbered-heading-12.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 

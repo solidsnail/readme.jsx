@@ -88,7 +88,7 @@ const Logo = () => <UI.Svg
 />
 
 const NumberedHeading = ({ text, number, width = "100%" }) => {
-    const url = `./assets/headings/numbered-heading-${number}.svg`;
+    const url = `./assets/readme-svg/headings/numbered-heading-${number}.svg`;
 
     return <UI.Svg
         url={url}
