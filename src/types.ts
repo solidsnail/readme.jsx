@@ -4,7 +4,8 @@ declare global {
             div: {}
             table: {}
             tr: {}
-            td: {}
+            td: { width?: string }
+            th: { width?: string }
             sub: {}
             sup: {}
             p: { align: "left" | "center" | "right" }

@@ -11,6 +11,8 @@ import { List } from "./list.js";
 import { Hr } from "./hr.js";
 import { Link } from "./link.js";
 import { Code } from "./code.js";
+import { Table } from "./table.js";
+import { Tasks } from "./tasks.js";
 
 export const UI = {
     Code,
@@ -25,5 +27,7 @@ export const UI = {
     Heading,
     Italic,
     StrikeThrough,
-    Boxed
+    Boxed,
+    Table,
+    Tasks
 }

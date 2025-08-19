@@ -1,28 +1,65 @@
-import { Hr } from "./dist/ui/hr.js"
-import { Br } from "./dist/ui/br.js"
-import { Bold } from "./dist/ui/bold.js"
-import { Boxed } from "./dist/ui/boxed.js"
-import { Image } from "./dist/ui/image.js"
-import { Heading } from "./dist/ui/heading.js"
-import { List } from "./dist/ui/list.js"
-import { Link } from "./dist/ui/link.js"
-import { Code } from "./dist/ui/code.js"
-
+import { UI } from "./dist/ui/index.js"
 export default <>
-    <Heading text="readme.jsx" />
-    <Boxed>
-        <Image width="200px" src="https://raw.githubusercontent.com/solidsnail/readme.jsx/refs/heads/main/assets/logo.png" />
-    </Boxed>
-    <Br /><Br />
-    MIT License. See the  <Link link="./LICENSE" description="LICENSE" />
-    <Br />
-    <List
+    <UI.Heading text="readme.jsx" />
+    <UI.Boxed>
+        <UI.Image width="200px" src="https://raw.githubusercontent.com/solidsnail/readme.jsx/refs/heads/main/assets/logo.png" />
+    </UI.Boxed>
+    <UI.Br /><UI.Br />
+    MIT License. See the  <UI.Link link="./LICENSE" description="LICENSE" />
+    <UI.Br />
+    <UI.List
         ordered
         list={[
-            <Bold text="No indentation requirements" />
+            <UI.Bold text="No indentation requirements" />
         ]}
     />
-    <Hr />
-    <Br />
-    <Code code="console.log('cool')" />
+    <UI.Hr />
+    <UI.Br />
+    <UI.Code code="console.log('cool')" />
+    <UI.Br />
+    <UI.Table
+        rows={[
+            [
+                {
+                    type: "th",
+                    content: "Heading A"
+                },
+                {
+                    type: "th",
+                    content: "Heading B"
+                },
+                {
+                    type: "th",
+                    content: "Heading C"
+                },
+            ],
+            [
+                {
+                    type: "td",
+                    content: "Content A"
+                },
+                {
+                    type: "td",
+                    content: "Content B"
+                },
+                {
+                    type: "td",
+                    content: "Content C"
+                },
+            ],
+        ]} />
+    <UI.Tasks list={[
+        {
+            content: "Fix bug 124",
+            done: true,
+        },
+        {
+            content: "Add Feature 33",
+            done: true,
+        },
+        {
+            content: "Add unit tests",
+            done: true,
+        },
+    ]} />
 </>

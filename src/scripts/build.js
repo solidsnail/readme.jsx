@@ -22,6 +22,7 @@ const main = async () => {
           },
           bin: "./index.js",
           dependencies: {
+            prettier: "^3.6.2"
           },
           exports: {
             "./themes/*.css": "./themes/*.css",

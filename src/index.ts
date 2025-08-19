@@ -2,7 +2,7 @@
 import fs from "fs";
 import ts from 'typescript';
 import path from "path"
-
+import prettier from "prettier"
 
 const [, , filepath] = process.argv
 
@@ -39,8 +39,10 @@ export function transpileJSX(filePath: string): string {
 
 const content = "import * as Readme from \"./dist/jsx.js\";\n\n" + transpileJSX(filepath)
 fs.writeFileSync("./README.js", content, "utf-8")
-import(new URL("../README.js", import.meta.url).toString()).then(mod => {
-    const compiled = mod.default
+import(new URL("../README.js", import.meta.url).toString()).then(async mod => {
+    const formatted = await prettier.format(mod.default, {
+        parser: "markdown",
+    });
     fs.rmSync("./README.js")
-    fs.writeFileSync("./TEST.md", compiled, "utf-8")
+    fs.writeFileSync("./TEST.md", formatted, "utf-8")
 })
