@@ -1,4 +1,4 @@
-<img src="./assets/readme-svg/logo.svg" /><img src="assets/animated.svg" />
+<img src="./assets/readme-svg/logo.svg" />
 
 MIT License. See the [LICENSE](./LICENSE)
 

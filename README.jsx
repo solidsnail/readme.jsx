@@ -103,7 +103,6 @@ export default <>
     <p id="subtitle">The jsx to md compiler</p>
 </div>`}
     />
-    <UI.Image src="assets/animated.svg" />
     <UI.Br /><UI.Br />
     MIT License. See the  <UI.Link link="./LICENSE" description="LICENSE" />
     <UI.Br />
