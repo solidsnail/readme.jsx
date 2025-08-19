@@ -3,7 +3,7 @@ import { writeDeep } from "../helpers.js";
 import { Image } from "./image.js";
 
 type CSSValue = string | number;
-type CSSRules = CSSStyleDeclaration;
+type CSSRules = Partial<CSSStyleDeclaration>;
 type StyleMap = Record<string, CSSRules>;
 type Keyframe = {
     name: string;
@@ -37,7 +37,7 @@ function formatValue(prop: string, value: CSSValue) {
 
 function rulesToCss(rules: CSSRules) {
     return Object.entries(rules)
-        .map(([k, v]) => `${camelToKebab(k)}: ${formatValue(k, v)};`)
+        .map(([k, v]) => `${camelToKebab(k)}: ${formatValue(k, v as CSSValue)};`)
         .join(" ");
 }
 

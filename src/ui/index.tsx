@@ -19,6 +19,8 @@ import { Alert } from "./alert.js";
 import { Emoji } from "./emoji.js";
 import { Svg } from "./svg.js";
 import { Badge } from "./badge.js";
+import { Terminal } from "./terminal.js";
+import { NumberHeading } from "./number-heading.js";
 
 export const UI = {
     Alert,
@@ -41,5 +43,7 @@ export const UI = {
     Tasks,
     Emoji,
     Svg,
+    Terminal,
+    NumberHeading,
     Badge
 }

@@ -91,139 +91,9 @@ const Logo = () => {
 </div>`}
     />
 }
-const NumberedHeading = ({ text, number, width = "100%" }) => {
-    const distUrl = `./assets/readme-svg/headings/numbered-heading-${number}.svg`;
 
-    return <UI.Svg
-        distUrl={distUrl}
-        width={width}
-        viewBox="0 0 800 100"
-        keyframes={[
-            {
-                name: "gradientShift",
-                frames: [
-                    { percent: "0%", style: { backgroundPosition: "0% 50%" } },
-                    { percent: "50%", style: { backgroundPosition: "100% 50%" } },
-                    { percent: "100%", style: { backgroundPosition: "0% 50%" } }
-                ]
-            },
-            {
-                name: "fadeIn",
-                frames: [
-                    { percent: "0%", style: { opacity: "0", transform: "translateY(20px)" } },
-                    { percent: "100%", style: { opacity: "1", transform: "translateY(0)" } }
-                ]
-            }
-        ]}
-        style={{
-            container: {
-                width: "100%",
-                height: "40px",
-                display: "flex",
-                alignItems: "center",
-                margin: "24px 0",
-                background: "transparent",
-                animation: "fadeIn 0.8s ease-out"
-            },
-            circle: {
-                width: "20px",
-                height: "20px",
-                borderRadius: "50%",
-                background: "linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
-                backgroundSize: "300% 300%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginRight: "16px",
-                animation: "gradientShift 3s ease infinite"
-            },
-            number: {
-                color: "white",
-                fontSize: "12px",
-                fontWeight: "bold",
-                fontFamily: "system-ui, sans-serif"
-            },
-            text: {
-                fontSize: "24px",
-                fontWeight: "600",
-                color: "#2c3e50",
-                fontFamily: "system-ui, sans-serif",
-                margin: "0"
-            }
-        }}
-        html={`<div id="container">
-    <div id="circle">
-        <span id="number">${number}</span>
-    </div>
-    <h2 id="text">${text}</h2>
-</div>`}
-    />
-}
 
-const SimpleTerminal = ({ width = "100%" }) => {
-    const distUrl = `./assets/readme-svg/terminal/simple-terminal.svg`;
 
-    return <UI.Svg
-        distUrl={distUrl}
-        width={width}
-        viewBox="0 0 800 50"
-        keyframes={[
-            {
-                name: "typing",
-                frames: [
-                    { percent: "0%", style: { width: "0ch" } },
-                    { percent: "100%", style: { width: "28ch" } }
-                ]
-            },
-            {
-                name: "blink",
-                frames: [
-                    { percent: "0%", style: { opacity: "1" } },
-                    { percent: "50%", style: { opacity: "0" } },
-                    { percent: "100%", style: { opacity: "1" } }
-                ]
-            }
-        ]}
-        style={{
-            terminal: {
-                backgroundColor: "#0d1117",
-                border: "1px solid #30363d",
-                borderRadius: "6px",
-                padding: "16px",
-                fontFamily: "'SF Mono', Monaco, 'Cascadia Code', monospace",
-                fontSize: "14px",
-                maxWidth: "500px",
-            },
-            line: {
-                color: "#e6edf3",
-            },
-            prompt: {
-                color: "#7c3aed",
-                fontWeight: "bold"
-            },
-            command: {
-                color: "#e6edf3",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                display: "inline-block",
-                width: "0ch",
-                animation: "typing 2.5s steps(28) 0.5s forwards"
-            },
-            cursor: {
-                color: "#7c3aed",
-                animation: "blink 1s infinite",
-                marginLeft: "1px"
-            }
-        }}
-        html={`<div id="terminal">
-    <div id="line">
-        <span id="prompt">$ </span>
-        <span id="command">npx readme.jsx ./README.jsx</span>
-        <span id="cursor">▎</span>
-    </div>
-</div>`}
-    />
-}
 
 export default <>
     <UI.Center>
@@ -237,19 +107,19 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="What is README.jsx?" number={1} />
+    <UI.NumberHeading text="What is README.jsx?" number={1} />
 
     README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
 
 
     <UI.Br />
 
-    <NumberedHeading text="Usage" number={3} />
+    <UI.NumberHeading text="Usage" number={3} />
 
-    <SimpleTerminal />
+    <UI.Terminal code="npx readme.jsx ./README.jsx" />
     <UI.Br />
 
-    <NumberedHeading text="Quick Start" number={4} />
+    <UI.NumberHeading text="Quick Start" number={4} />
 
     Create a <UI.Code code="README.jsx" inline /> file:
 
@@ -275,7 +145,7 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Available UI" number={5} />
+    <UI.NumberHeading text="Available UI" number={5} />
 
     <UI.Table rows={[
         [
@@ -590,12 +460,40 @@ export default <>
                 type: "td",
             },
         ],
+        [
+            {
+                content: "Terminal",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code={`<UI.Terminal code="npx example" />`} />,
+                type: "td",
+            },
+            {
+                content: <UI.Terminal code="npx example" />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Number Heading",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code={`<UI.NumberHeading text="Usage" number={2} />`} />,
+                type: "td",
+            },
+            {
+                content: <UI.NumberHeading text="Usage" number={2} />,
+                type: "td",
+            },
+        ],
     ]} />
 
 
     <UI.Br />
 
-    <NumberedHeading text="Advanced Example: Animated SVG" number={6} />
+    <UI.NumberHeading text="Advanced Example: Animated SVG" number={6} />
 
 
     <UI.Code code={`<UI.Svg
@@ -622,7 +520,7 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Configuration" number={7} />
+    <UI.NumberHeading text="Configuration" number={7} />
 
     Add these scripts to your <UI.Code code="package.json" inline />:
 
@@ -635,7 +533,7 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Benefits" number={8} />
+    <UI.NumberHeading text="Benefits" number={8} />
     <UI.Br />
     <UI.List list={[
         "🔧 **IDE Support** - Full IntelliSense and autocomplete",
@@ -647,7 +545,7 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Contributing" number={9} />
+    <UI.NumberHeading text="Contributing" number={9} />
 
     We welcome contributions! Here's how you can help:
 
@@ -663,7 +561,7 @@ export default <>
     <UI.Br />
     <UI.Br />
 
-    <NumberedHeading text="License" number={10} />
+    <UI.NumberHeading text="License" number={10} />
 
     This project is licensed under the MIT License - see the LICENSE file for details.
 

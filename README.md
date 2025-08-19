@@ -3,9 +3,9 @@
 > [!NOTE]
 > This markdown has been generated using readme.jsx
 
-<img src="./assets/readme-svg/headings/numbered-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
-<img src="./assets/readme-svg/headings/numbered-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal/simple-terminal.svg" width="100%" />
-<img src="./assets/readme-svg/headings/numbered-heading-4.svg" width="100%" />Create a `README.jsx` file:
+<img src="./assets/readme-svg/number-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
+<img src="./assets/readme-svg/number-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal.svg" width="100%" />
+<img src="./assets/readme-svg/number-heading-4.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx
 import { UI } from "readme.jsx";
@@ -29,7 +29,7 @@ Compile to Markdown:
 npx readme.jsx ./README.jsx
 ```
 
-<img src="./assets/readme-svg/headings/numbered-heading-5.svg" width="100%" /><table ><tr ><th >
+<img src="./assets/readme-svg/number-heading-5.svg" width="100%" /><table ><tr ><th >
 
 Name
 
@@ -301,8 +301,32 @@ Badge
 
 <img src="https://img.shields.io/badge/The%20badge-Suffix-red?style=for-the-badge&labelColor=yellow&color=red" alt="The badge" />
 
+</td></tr><tr ><td >
+
+Terminal
+
+</td><td >
+
+`<UI.Terminal code="npx example" />`
+
+</td><td >
+
+<img src="./assets/readme-svg/terminal.svg" width="100%" />
+
+</td></tr><tr ><td >
+
+Number Heading
+
+</td><td >
+
+`<UI.NumberHeading text="Usage" number={2} />`
+
+</td><td >
+
+<img src="./assets/readme-svg/number-heading-2.svg" width="100%" />
+
 </td></tr></table>
-<img src="./assets/readme-svg/headings/numbered-heading-6.svg" width="100%" />
+<img src="./assets/readme-svg/number-heading-6.svg" width="100%" />
 
 ```jsx
 <UI.Svg
@@ -328,7 +352,7 @@ Badge
 />
 ```
 
-<img src="./assets/readme-svg/headings/numbered-heading-7.svg" width="100%" />Add these scripts to your `package.json`:
+<img src="./assets/readme-svg/number-heading-7.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json
 {
@@ -339,7 +363,7 @@ Badge
 }
 ```
 
-<img src="./assets/readme-svg/headings/numbered-heading-8.svg" width="100%" />
+<img src="./assets/readme-svg/number-heading-8.svg" width="100%" />
 
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
 - ♻️ **Reusability** - Create custom components and templates
@@ -347,7 +371,7 @@ Badge
 - 📱 **Responsive** - Built-in responsive design patterns
 - ⚡ **Fast** - Efficient compilation to standard Markdown
 
-<img src="./assets/readme-svg/headings/numbered-heading-9.svg" width="100%" />We welcome contributions! Here's how you can help:
+<img src="./assets/readme-svg/number-heading-9.svg" width="100%" />We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -356,7 +380,7 @@ Badge
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
 
-<img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+<img src="./assets/readme-svg/number-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
