@@ -237,20 +237,6 @@ export default <>
 
     README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
 
-    <UI.Br />
-
-    <NumberedHeading text="Features" number={2} />
-
-    <UI.List list={[
-        "📝 Write README files using JSX syntax",
-        "🎨 Rich UI components for better documentation",
-        "🔧 TypeScript support out of the box",
-        "📱 Responsive layouts with built-in components",
-        "🎭 Animated SVG generation capabilities",
-        "📊 Tables, lists, and interactive elements",
-        "🎯 Type-safe component props",
-        "⚡ Fast compilation to standard Markdown"
-    ]} />
 
     <UI.Br />
 
@@ -285,60 +271,314 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Available Components" number={5} />
+    <NumberedHeading text="Available UI" number={5} />
 
-    <UI.Accordion title="Text Formatting">
-        <UI.List list={[
-            `${UI.Bold({ text: "Bold" })} - **Bold text**`,
-            `${UI.Italic({ text: "Italic" })} - *Italic text*`,
-            `${UI.StrikeThrough({ text: "Strikethrough" })} - ~~Strikethrough text~~`,
-            `${UI.Code({ code: "inline code", inline: true })} - Inline code`,
-        ]} />
-    </UI.Accordion>
+    <UI.Table rows={[
+        [
+            {
+                content: "Name",
+                type: "th",
+            },
+            {
+                content: "Code",
+                type: "th",
+            },
+            {
+                content: "Preview",
+                type: "th",
+            },
+        ],
+        [
+            {
+                content: "Bold",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Bold text='Hello' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Bold text='Hello' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Italic",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Italic text='Hello' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Italic text='Hello' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Strikethrough",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.StrikeThrough text='Hello' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.StrikeThrough text='Hello' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Inline Code",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Code inline code='console.log()' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Code inline code='console.log()' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Code Block",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Code lang='js' code='const x = 1;' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Code lang='js' code='const x = 1;' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Link",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Code inline code='console.log()' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Link link='#hello' description='Click me' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Heading",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Heading text='Title' order={2} />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Heading text='Title' order={2} />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "List",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.List list={['Item 1', 'Item 2']} />" />,
+                type: "td",
+            },
+            {
+                content: <UI.List list={['Item 1', 'Item 2']} />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Ordered List",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.List list={['First', 'Second']} ordered />" />,
+                type: "td",
+            },
+            {
+                content: <>
+                    <UI.Br />
+                    <UI.Br />
+                    <UI.List ordered list={['First', 'Second']} />
+                </>,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Image",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Image src='logo.png' width='100px' />" />,
+                type: "td",
+            },
+            {
+                content: "![](logo.png)",
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Alert Note",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='NOTE' text='Important info' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Alert type='NOTE' text='Important info' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Alert Warning",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='WARNING' text='Be careful!' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Alert type='WARNING' text='Be careful!' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Alert Tip",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Alert type='TIP' text='Pro tip here' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Alert type='TIP' text='Pro tip here' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Tasks",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Tasks list={[{content: 'Done', done: true}]} />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Tasks list={[{ content: 'Done', done: true }, { content: 'Todo', done: false }]} />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Keyboard Key",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Kbd text='Ctrl+C' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Kbd text='Ctrl+C' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Subscript",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Sub text='2' />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Sub text='2' />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Horizontal Rule",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Hr />" />,
+                type: "td",
+            },
+            {
+                content: <UI.Hr />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Line Break",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Br />" />,
+                type: "td",
+            },
+            {
+                content: "↵ (new line)",
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Center Align",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Center>Content</UI.Center>" />,
+                type: "td",
+            },
+            {
+                content: <UI.Center>Centered Text</UI.Center>,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Boxed Content",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code="<UI.Boxed>Content</UI.Boxed>" />,
+                type: "td",
+            },
+            {
+                content: <UI.Boxed>Boxed Text</UI.Boxed>,
+                type: "td",
+            },
+        ],
+    ]} />
 
-    <UI.Accordion title="Layout Components">
-        <UI.List list={[
-            "<UI.Center> - Center align content",
-            "<UI.Boxed> - Put content in a table box",
-            "<UI.Br /> - Line break",
-            "<UI.Hr /> - Horizontal rule"
-        ]} />
-    </UI.Accordion>
-
-    <UI.Accordion title="Content Components">
-        <UI.List list={[
-            "<UI.Heading> - Create headings (h1-h6)",
-            "<UI.List> - Ordered and unordered lists",
-            "<UI.Image> - Images with width support",
-            "<UI.Link> - Clickable links",
-            "<UI.Table> - Rich tables with custom widths",
-            "<UI.Tasks> - GitHub-style task lists"
-        ]} />
-    </UI.Accordion>
-
-    <UI.Accordion title="Interactive Components">
-        <UI.List list={[
-            "<UI.Accordion> - Collapsible sections",
-            "<UI.Alert> - GitHub-style alerts (NOTE, TIP, WARNING, etc.)",
-            "<UI.Kbd> - Keyboard key styling",
-            "<UI.Emoji> - Emoji support"
-        ]} />
-    </UI.Accordion>
-
-    <UI.Accordion title="Advanced Components">
-        <UI.List list={[
-            "<UI.Svg> - Generate animated SVGs with CSS keyframes",
-            "<UI.Code> - Syntax-highlighted code blocks",
-            "<UI.Sub> - Subscript text",
-            "<UI.Sup> - Superscript text"
-        ]} />
-    </UI.Accordion>
 
     <UI.Br />
 
     <NumberedHeading text="Advanced Example: Animated SVG" number={6} />
 
-    Create stunning animated graphics directly in your README:
 
     <UI.Code code={`<UI.Svg
     url="./logo.svg"

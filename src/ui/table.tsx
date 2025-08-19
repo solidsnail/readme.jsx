@@ -1,4 +1,5 @@
 import * as Readme from "../jsx.js"
+import { Br } from "./br.js";
 
 export const Table = ({ rows }: {
     rows: Array<{
@@ -13,7 +14,11 @@ export const Table = ({ rows }: {
                 {row.map(tdh => {
                     const Tagname = tdh.type || "td"
                     return <Tagname width={tdh.width}>
+                        <Br />
+                        <Br />
                         {tdh.content}
+                        <Br />
+                        <Br />
                     </Tagname>
                 })}
             </tr>

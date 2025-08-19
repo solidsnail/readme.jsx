@@ -37,13 +37,16 @@ export function transpileJSX(filePath: string): string {
     return result.outputText;
 }
 
-
-const content = "import * as Readme from \"./dist/jsx.js\";\n\n" + transpileJSX(filepath)
-writeDeep("./README.js", content)
-import(new URL("../README.js", import.meta.url).toString()).then(async mod => {
-    const formatted = await prettier.format(mod.default, {
-        parser: "markdown",
-    });
-    fs.rmSync("./README.js")
-    writeDeep("./README.md", formatted)
-})
+try {
+    const content = "import * as Readme from \"./dist/jsx.js\";\n\n" + transpileJSX(filepath)
+    writeDeep("./README.js", content)
+    import(new URL("../README.js", import.meta.url).toString()).then(async mod => {
+        const formatted = await prettier.format(mod.default, {
+            parser: "markdown",
+        });
+        fs.rmSync("./README.js")
+        writeDeep("./README.md", formatted)
+    })
+} catch (error) {
+    console.error(error)
+}
