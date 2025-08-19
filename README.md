@@ -407,8 +407,3 @@ Number Heading
 - [ ] 🚀 Submit a pull request
 
 <img src="./assets/readme-svg/number-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-<p align="center">**Made with ❤️ by the README.jsx team**
-[⭐ Star us on GitHub](https://github.com/readme-jsx/readme.jsx)</p>

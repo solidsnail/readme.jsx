@@ -595,11 +595,4 @@ export default <>
 
     <UI.Br />
 
-    <UI.Hr />
-
-    <UI.Center>
-        <UI.Bold text="Made with ❤️ by the README.jsx team" />
-        <UI.Br />
-        <UI.Link link="https://github.com/readme-jsx/readme.jsx" description="⭐ Star us on GitHub" />
-    </UI.Center>
 </>
