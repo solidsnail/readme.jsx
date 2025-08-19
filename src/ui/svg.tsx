@@ -52,12 +52,14 @@ function normalizeSelector(selector: string) {
 
 
 export const Svg = ({
+    width,
     url,
     style,
     html,
     keyframes = [],
 }: {
     url: string,
+    width?: string,
     keyframes?: Keyframe[];
     style: StyleMap;
     html: string;
@@ -96,5 +98,5 @@ ${html}
   </foreignObject>
 </svg>`;
     writeDeep(url, code);
-    return <Image src={url} />;
+    return <Image width={width} src={url} />;
 };
