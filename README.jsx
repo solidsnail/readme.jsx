@@ -55,11 +55,19 @@ export default <>
         },
         {
             content: "Add Feature 33",
-            done: true,
+            done: false,
         },
         {
             content: "Add unit tests",
-            done: true,
+            done: false,
         },
     ]} />
+    <UI.Br />
+    <UI.Accordion title="A collapsible">
+        <UI.Kbd text="Ctrl + L" /><UI.Br />
+        <UI.Kbd text="Ctrl + S" /><UI.Br />
+        <UI.Kbd text="Ctrl + F" />
+    </UI.Accordion>
+    <UI.Br />
+    <UI.Emoji emjoji=":baby:" />
 </>

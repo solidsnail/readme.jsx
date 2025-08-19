@@ -13,8 +13,13 @@ import { Link } from "./link.js";
 import { Code } from "./code.js";
 import { Table } from "./table.js";
 import { Tasks } from "./tasks.js";
+import { Kbd } from "./kbd.js";
+import { Accordion } from "./accordion.js";
+import { Alert } from "./alert.js";
+import { Emoji } from "./emoji.js";
 
 export const UI = {
+    Alert,
     Code,
     Link,
     Hr,
@@ -29,5 +34,8 @@ export const UI = {
     StrikeThrough,
     Boxed,
     Table,
-    Tasks
+    Kbd,
+    Accordion,
+    Tasks,
+    Emoji
 }

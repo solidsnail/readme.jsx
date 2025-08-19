@@ -4,6 +4,9 @@ declare global {
             div: {}
             table: {}
             tr: {}
+            kbd: {}
+            details: {}
+            summary: {}
             td: { width?: string }
             th: { width?: string }
             sub: {}
