@@ -13,6 +13,7 @@ console.log("cool");
 ```
 
 <table ><tr ><th >Heading A</th><th >Heading B</th><th >Heading C</th></tr><tr ><td >Content A</td><td >Content B</td><td >Content C</td></tr></table>
+
 - [x] Fix bug 124
 - [x] Add Feature 33
 - [x] Add unit tests
