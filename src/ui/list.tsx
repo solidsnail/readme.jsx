@@ -1,4 +1,4 @@
 
-export const List = ({ list }: { list: any[] }) => {
-    return "\n" + list.map(item => `- ${item}`).join("\n") + "\n"
+export const List = ({ list, ordered = false }: { list: any[], ordered?: boolean }) => {
+    return "\n" + list.map((item , i) => `${ordered ? `${i+1}.` : "-"} ${item}`).join("\n") + "\n"
 }
