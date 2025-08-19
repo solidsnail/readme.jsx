@@ -45,5 +45,5 @@ import(new URL("../README.js", import.meta.url).toString()).then(async mod => {
         parser: "markdown",
     });
     fs.rmSync("./README.js")
-    writeDeep("./TEST.md", formatted)
+    writeDeep("./README.md", formatted)
 })
