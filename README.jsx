@@ -585,7 +585,7 @@ export default <>
 
 
     <UI.Code code={`<UI.Svg
-    url="./logo.svg"
+    distUrl="./logo.svg"
     width="300px"
     keyframes={[
         {
@@ -646,6 +646,7 @@ export default <>
         { content: "🚀 Submit a pull request", done: false }
     ]} />
 
+    <UI.Br />
     <UI.Br />
 
     <NumberedHeading text="License" number={10} />

@@ -294,7 +294,7 @@ Boxed Content
 
 ```jsx
 <UI.Svg
-  url="./logo.svg"
+  distUrl="./logo.svg"
   width="300px"
   keyframes={[
     {
@@ -343,7 +343,8 @@ Boxed Content
 - [ ] ✅ Write tests
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
-      <img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+
+<img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
