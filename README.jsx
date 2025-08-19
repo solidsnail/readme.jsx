@@ -4,49 +4,48 @@ export default <>
         url="./assets/readme-svg/logo.svg"
         keyframes={[
             {
+                name: "typing",
+                frames: [
+                    { percent: "0%", style: { width: "0ch" } },
+                    { percent: "100%", style: { width: "12ch" } }, // matches "README.jsx"
+                ]
+            },
+            {
+                name: "blinkCaret",
+                frames: [
+                    { percent: "0%", style: { borderColor: "transparent" } },
+                    { percent: "50%", style: { borderColor: "currentColor" } },
+                    { percent: "100%", style: { borderColor: "transparent" } },
+                ]
+            },
+            {
                 name: "textWave",
                 frames: [
-                    {
-                        percent: "0%",
-                        style: {
-                            transform: "translateY(0px)"
-                        }
-                    },
-                    {
-                        percent: "50%",
-                        style: {
-                            transform: "translateY(-10px)"
-                        }
-                    },
-                    {
-                        percent: "100%",
-                        style: {
-                            transform: "translateY(0px)"
-                        }
-                    },
+                    { percent: "0%", style: { transform: "translateY(0px)" } },
+                    { percent: "50%", style: { transform: "translateY(-10px)" } },
+                    { percent: "100%", style: { transform: "translateY(0px)" } },
+                ]
+            },
+            {
+                name: "colorCycle",
+                frames: [
+                    { percent: "0%", style: { color: "#fc5c7d" } },
+                    { percent: "33%", style: { color: "#6a82fb" } },
+                    { percent: "66%", style: { color: "#05dfd7" } },
+                    { percent: "100%", style: { color: "#fc5c7d" } },
                 ]
             },
             {
                 name: "fadeIn",
                 frames: [
-                    {
-                        percent: "0%",
-                        style: {
-                            opacity: "0"
-                        }
-                    },
-                    {
-                        percent: "100%",
-                        style: {
-                            opacity: "1"
-                        }
-                    },
+                    { percent: "0%", style: { opacity: "0" } },
+                    { percent: "100%", style: { opacity: "1" } },
                 ]
             },
         ]}
         style={{
             container: {
-                fontFamily: 'system-ui',
+                fontFamily: 'system-ui, monospace',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -54,8 +53,7 @@ export default <>
                 margin: 0,
                 width: '100%',
                 height: 400,
-                background: 'transparent', // ✅ removed gradient background
-                color: '#111',             // dark text since no background
+                background: 'transparent', // ✅ no background
                 textAlign: 'center',
             },
             title: {
@@ -64,14 +62,22 @@ export default <>
                 lineHeight: 1.3,
                 letterSpacing: 5,
                 textTransform: 'uppercase',
-                animation: 'textWave 2s ease-in-out infinite, fadeIn 2s ease forwards',
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                borderRight: "4px solid currentColor",
+                width: "0ch",
+                animation:
+                    "typing 2s steps(12, end) forwards, " + // typewriter effect
+                    "blinkCaret 0.7s step-end infinite, " + // blinking caret
+                    "textWave 3s ease-in-out infinite 2s, " + // wave after typing
+                    "colorCycle 6s linear infinite 2s",     // color change
             },
             subtitle: {
                 fontSize: "32px",
-                marginTop: "10px",
+                marginTop: "15px",
                 fontFamily: "monospace",
                 opacity: 0,
-                animation: 'fadeIn 3s ease forwards 1s',
+                animation: 'fadeIn 2s ease forwards 3s',
             }
         }}
         html={`<div id="container">
@@ -79,73 +85,8 @@ export default <>
     <p id="subtitle">The jsx to md compiler</p>
 </div>`}
     />
+    <UI.Br />
+    <UI.Br />
 
-    <UI.Br /><UI.Br />
-    MIT License. See the  <UI.Link link="./LICENSE" description="LICENSE" />
-    <UI.Br />
-    <UI.List
-        ordered
-        list={[
-            <UI.Bold text="No indentation requirements" />
-        ]}
-    />
-    <UI.Hr />
-    <UI.Br />
-    <UI.Code code="console.log('cool')" />
-    <UI.Br />
-    <UI.Table
-        rows={[
-            [
-                {
-                    type: "th",
-                    content: "Heading A"
-                },
-                {
-                    type: "th",
-                    content: "Heading B"
-                },
-                {
-                    type: "th",
-                    content: "Heading C"
-                },
-            ],
-            [
-                {
-                    type: "td",
-                    content: "Content A"
-                },
-                {
-                    type: "td",
-                    content: "Content B"
-                },
-                {
-                    type: "td",
-                    content: "Content C"
-                },
-            ],
-        ]} />
-    <UI.Tasks list={[
-        {
-            content: "Fix bug 124",
-            done: true,
-        },
-        {
-            content: "Add Feature 33",
-            done: false,
-        },
-        {
-            content: "Add unit tests",
-            done: false,
-        },
-    ]} />
-    <UI.Br />
-    <UI.Accordion title="A collapsible">
-        <UI.Kbd text="Ctrl + L" /><UI.Br />
-        <UI.Kbd text="Ctrl + S" /><UI.Br />
-        <UI.Kbd text="Ctrl + F" />
-    </UI.Accordion>
-    <UI.Br />
-    <UI.Emoji emjoji=":baby:" />
-    <UI.Br />
 
 </>
