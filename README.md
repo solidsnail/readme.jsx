@@ -15,12 +15,7 @@
 - 🎯 Type-safe component props
 - ⚡ Fast compilation to standard Markdown
 
-<img src="./assets/readme-svg/headings/numbered-heading-3.svg" width="100%" />
-
-```bash
-npx readme.jsx ./README.jsx
-```
-
+<img src="./assets/readme-svg/headings/numbered-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal/simple-terminal.svg" width="100%" />
 <img src="./assets/readme-svg/headings/numbered-heading-4.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx
