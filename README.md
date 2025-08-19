@@ -1,7 +1,7 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" width="300px" /></p>
 
-> [!TIP]
-> Write your README files using JSX syntax and compile them to beautiful Markdown!
+> [!NOTE]
+> This markdown has been generated using readme.jsx
 
 <img src="./assets/readme-svg/headings/numbered-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
 <img src="./assets/readme-svg/headings/numbered-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal/simple-terminal.svg" width="100%" />
@@ -316,58 +316,7 @@ Boxed Content
 />
 ```
 
-<img src="./assets/readme-svg/headings/numbered-heading-7.svg" width="100%" /><table ><tr ><th width="30%">
-
-**Component**
-
-</th><th width="50%">
-
-**Description**
-
-</th><th width="20%">
-
-**Example**
-
-</th></tr><tr ><td >
-
-`<UI.Alert>`
-
-</td><td >
-
-GitHub-style callout boxes
-
-</td><td >
-
-> [!NOTE]
-> Like this!
-
-</td></tr><tr ><td >
-
-`<UI.Tasks>`
-
-</td><td >
-
-Interactive task lists
-
-</td><td >
-
-- [x] Done
-- [ ] Todo
-
-</td></tr><tr ><td >
-
-`<UI.Kbd>`
-
-</td><td >
-
-Keyboard key styling
-
-</td><td >
-
-Press Ctrl+C
-
-</td></tr></table>
-<img src="./assets/readme-svg/headings/numbered-heading-8.svg" width="100%" />Add these scripts to your `package.json`:
+<img src="./assets/readme-svg/headings/numbered-heading-7.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json
 {
@@ -378,49 +327,15 @@ Press Ctrl+C
 }
 ```
 
-<img src="./assets/readme-svg/headings/numbered-heading-9.svg" width="100%" /><table ><tr ><td ><p align="center">**Traditional Markdown**
+<img src="./assets/readme-svg/headings/numbered-heading-8.svg" width="100%" />
 
-````markdown
-# My Project
-
-> **Note**
-> This is a note
-
-- Item 1
-- Item 2
-
-```javascript
-console.log("Hello");
-```
-````
-
-````
-
-</p></td></tr></table><p align="center">**VS**</p><table ><tr ><td ><p align="center">**README.jsx**
-
-
-```jsx
-<UI.Heading text="My Project" />
-
-<UI.Alert type="NOTE" text="This is a note" />
-
-<UI.List list={["Item 1", "Item 2"]} />
-
-<UI.Code code='console.log("Hello");' lang="javascript" />
-````
-
-</p></td></tr></table>
-<img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />
-
-- 🔍 **Type Safety** - Catch errors at compile time
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
 - ♻️ **Reusability** - Create custom components and templates
 - 🎨 **Rich Styling** - Advanced layouts and animations
 - 📱 **Responsive** - Built-in responsive design patterns
 - ⚡ **Fast** - Efficient compilation to standard Markdown
-- 🧪 **Testable** - Unit test your documentation components
 
-<img src="./assets/readme-svg/headings/numbered-heading-11.svg" width="100%" />We welcome contributions! Here's how you can help:
+<img src="./assets/readme-svg/headings/numbered-heading-9.svg" width="100%" />We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -428,7 +343,7 @@ console.log("Hello");
 - [ ] ✅ Write tests
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
-      <img src="./assets/readme-svg/headings/numbered-heading-12.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+      <img src="./assets/readme-svg/headings/numbered-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 

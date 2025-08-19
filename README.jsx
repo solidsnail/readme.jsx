@@ -229,7 +229,7 @@ export default <>
     <UI.Br />
     <UI.Br />
 
-    <UI.Alert type="TIP" text="Write your README files using JSX syntax and compile them to beautiful Markdown!" />
+    <UI.Alert type="NOTE" text="This markdown has been generated using readme.jsx" />
 
     <UI.Br />
 
@@ -604,34 +604,7 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Example: Rich Table" number={7} />
-
-    <UI.Table rows={[
-        [
-            { content: UI.Bold({ text: "Component" }), type: "th", width: "30%" },
-            { content: UI.Bold({ text: "Description" }), type: "th", width: "50%" },
-            { content: UI.Bold({ text: "Example" }), type: "th", width: "20%" }
-        ],
-        [
-            { content: UI.Code({ code: "<UI.Alert>", inline: true }) },
-            { content: "GitHub-style callout boxes" },
-            { content: UI.Alert({ type: "NOTE", text: "Like this!" }).trim() }
-        ],
-        [
-            { content: UI.Code({ code: "<UI.Tasks>", inline: true }) },
-            { content: "Interactive task lists" },
-            { content: "- [x] Done\n- [ ] Todo" }
-        ],
-        [
-            { content: UI.Code({ code: "<UI.Kbd>", inline: true }) },
-            { content: "Keyboard key styling" },
-            { content: "Press Ctrl+C" }
-        ]
-    ]} />
-
-    <UI.Br />
-
-    <NumberedHeading text="Configuration" number={8} />
+    <NumberedHeading text="Configuration" number={7} />
 
     Add these scripts to your <UI.Code code="package.json" inline />:
 
@@ -644,61 +617,19 @@ export default <>
 
     <UI.Br />
 
-    <NumberedHeading text="Why Choose README.jsx?" number={9} />
-
-    <UI.Boxed>
-        <UI.Center>
-            <UI.Bold text="Traditional Markdown" />
-            <UI.Br />
-            <UI.Code code={`# My Project
-
-> **Note**
-> This is a note
-
-- Item 1
-- Item 2
-
-\`\`\`javascript
-console.log("Hello");
-\`\`\``} lang="markdown" />
-        </UI.Center>
-    </UI.Boxed>
-
-    <UI.Center>
-        <UI.Bold text="VS" />
-    </UI.Center>
-
-    <UI.Boxed>
-        <UI.Center>
-            <UI.Bold text="README.jsx" />
-            <UI.Br />
-            <UI.Code code={`<UI.Heading text="My Project" />
-
-<UI.Alert type="NOTE" text="This is a note" />
-
-<UI.List list={["Item 1", "Item 2"]} />
-
-<UI.Code code='console.log("Hello");' lang="javascript" />`} lang="jsx" />
-        </UI.Center>
-    </UI.Boxed>
-
-    <UI.Br />
-
-    <NumberedHeading text="Benefits" number={10} />
+    <NumberedHeading text="Benefits" number={8} />
     <UI.Br />
     <UI.List list={[
-        "🔍 **Type Safety** - Catch errors at compile time",
         "🔧 **IDE Support** - Full IntelliSense and autocomplete",
         "♻️ **Reusability** - Create custom components and templates",
         "🎨 **Rich Styling** - Advanced layouts and animations",
         "📱 **Responsive** - Built-in responsive design patterns",
         "⚡ **Fast** - Efficient compilation to standard Markdown",
-        "🧪 **Testable** - Unit test your documentation components"
     ]} />
 
     <UI.Br />
 
-    <NumberedHeading text="Contributing" number={11} />
+    <NumberedHeading text="Contributing" number={9} />
 
     We welcome contributions! Here's how you can help:
 
@@ -713,7 +644,7 @@ console.log("Hello");
 
     <UI.Br />
 
-    <NumberedHeading text="License" number={12} />
+    <NumberedHeading text="License" number={10} />
 
     This project is licensed under the MIT License - see the LICENSE file for details.
 
