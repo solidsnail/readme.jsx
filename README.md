@@ -4,7 +4,7 @@
 > This markdown has been generated using readme.jsx
 
 <img src="./assets/readme-svg/number-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
-<img src="./assets/readme-svg/number-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal.svg" width="100%" />
+<img src="./assets/readme-svg/number-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
 <img src="./assets/readme-svg/number-heading-4.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx

@@ -116,7 +116,7 @@ export default <>
 
     <UI.NumberHeading text="Usage" number={3} />
 
-    <UI.Terminal code="npx readme.jsx ./README.jsx" />
+    <UI.Terminal code="npx readme.jsx ./README.jsx" distUrl="./assets/readme-svg/terminal-usage.svg" />
     <UI.Br />
 
     <UI.NumberHeading text="Quick Start" number={4} />
