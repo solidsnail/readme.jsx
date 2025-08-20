@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/readme-svg/logo.svg" width="300px" /></p>
+<p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
 
 > [!NOTE]
 > This markdown has been generated using readme.jsx

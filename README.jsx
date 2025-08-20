@@ -2,99 +2,70 @@ import { UI } from "./dist/ui/index.js"
 
 const Logo = () => {
     const distUrl = "./assets/readme-svg/logo.svg"
-    return < UI.Svg
+    return <UI.Svg
         distUrl={distUrl}
-        width="300px"
-        keyframes={
-            [
-                {
-                    name: "typing",
-                    frames: [
-                        { percent: "0%", style: { width: "0ch" } },
-                        { percent: "100%", style: { width: "12ch" } },
-                    ]
-                },
-                {
-                    name: "blinkCaret",
-                    frames: [
-                        { percent: "0%", style: { borderColor: "transparent" } },
-                        { percent: "50%", style: { borderColor: "currentColor" } },
-                        { percent: "100%", style: { borderColor: "transparent" } },
-                    ]
-                },
-                {
-                    name: "textWave",
-                    frames: [
-                        { percent: "0%", style: { transform: "translateY(0px)" } },
-                        { percent: "50%", style: { transform: "translateY(-10px)" } },
-                        { percent: "100%", style: { transform: "translateY(0px)" } },
-                    ]
-                },
-                {
-                    name: "colorCycle",
-                    frames: [
-                        { percent: "0%", style: { color: "#fc5c7d" } },
-                        { percent: "33%", style: { color: "#6a82fb" } },
-                        { percent: "66%", style: { color: "#05dfd7" } },
-                        { percent: "100%", style: { color: "#fc5c7d" } },
-                    ]
-                },
-                {
-                    name: "fadeIn",
-                    frames: [
-                        { percent: "0%", style: { opacity: "0" } },
-                        { percent: "100%", style: { opacity: "1" } },
-                    ]
-                },
-            ]}
+        viewBox="0 0 800 150"
+        keyframes={[
+            {
+                name: "dotBounce",
+                frames: [
+                    { percent: "0%", style: { transform: "scale(1)" } },
+                    { percent: "50%", style: { transform: "scale(1.5)" } },
+                    { percent: "100%", style: { transform: "scale(1)" } },
+                ]
+            },
+            {
+                name: "fadeIn",
+                frames: [
+                    { percent: "0%", style: { opacity: "0" } },
+                    { percent: "100%", style: { opacity: "1" } },
+                ]
+            }
+        ]}
         style={{
             container: {
-                fontFamily: 'system-ui, monospace',
+                fontFamily: "'Inter', -apple-system, system-ui, sans-serif",
                 display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                margin: 0,
                 width: '100%',
-                height: 400,
+                height: 120,
                 background: 'transparent',
                 textAlign: 'center',
+                position: 'relative'
             },
             title: {
-                fontSize: "80px",
-                fontWeight: "bold",
-                lineHeight: 1.3,
-                letterSpacing: 5,
-                textTransform: 'uppercase',
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                borderRight: "4px solid currentColor",
-                width: "0ch",
-                animation:
-                    "typing 2s steps(12, end) forwards, " +
-                    "blinkCaret 0.7s step-end infinite, " +
-                    "textWave 3s ease-in-out infinite 2s, " +
-                    "colorCycle 6s linear infinite 2s",
+                fontSize: "64px",
+                fontWeight: "800",
+                color: "#1f2937",
+                letterSpacing: "-1px",
+                margin: 0,
+                animation: "fadeIn 0.8s ease-out",
+                position: 'relative'
             },
-            subtitle: {
-                fontSize: "32px",
-                marginTop: "15px",
-                fontFamily: "monospace",
-                opacity: 0,
-                animation: 'fadeIn 2s ease forwards 3s',
+            jsx: {
+                fontWeight: "300",
+                color: "#6b7280",
+                position: 'relative',
+                position: "absolute",
+                top: "40px",
+            },
+            dot: {
+                position: "absolute",
+                top: "22px",
+                left: "2px",
+                width: "8px",
+                height: "8px",
+                backgroundColor: "#3b82f6",
+                borderRadius: "50%",
+                animation: "dotBounce 2s ease-in-out infinite"
             }
-        }
-        }
+        }}
         html={`<div id="container">
-    <h1 id="title">README.jsx</h1>
-    <p id="subtitle">The JSX to Markdown compiler</p>
+    <h1 id="title">README<span id="jsx">jsx<span id="dot"></span></span></h1>
 </div>`}
     />
 }
-
-
-
-
 export default <>
     <UI.Center>
         <Logo />
