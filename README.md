@@ -356,8 +356,8 @@ Number Heading
 
 ```jsx
 <UI.Svg
-  distUrl="./logo.svg"
-  width="300px"
+  distUrl="./assets/myanimated-title.svg"
+  viewBox="0 0 800 100"
   keyframes={[
     {
       name: "fadeIn",
@@ -369,15 +369,17 @@ Number Heading
   ]}
   style={{
     title: {
-      fontSize: "48px",
+      fontSize: "30px",
       fontWeight: "bold",
-      animation: "fadeIn 2s ease-in-out",
+      fontFamily: "monospace",
+      animation: "fadeIn 1s ease-in-out infinite",
     },
   }}
   html={`<h1 id="title">Animated Title</h1>`}
 />
 ```
 
+<img src="./assets/myanimated-title.svg" />
 <img src="./assets/readme-svg/number-heading-7.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json

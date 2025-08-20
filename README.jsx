@@ -525,8 +525,8 @@ export default <>
 
 
     <UI.Code code={`<UI.Svg
-    distUrl="./logo.svg"
-    width="300px"
+    distUrl="./assets/myanimated-title.svg"
+    viewBox="0 0 800 100"
     keyframes={[
         {
             name: "fadeIn",
@@ -538,13 +538,39 @@ export default <>
     ]}
     style={{
         title: {
-            fontSize: "48px",
+            fontSize: "30px",
             fontWeight: "bold",
-            animation: "fadeIn 2s ease-in-out"
+            fontFamily: "monospace",
+            animation: "fadeIn 1s ease-in-out infinite"
         }
     }}
     html={\`<h1 id="title">Animated Title</h1>\`}
 />`} lang="jsx" />
+
+    <UI.Br />
+
+    <UI.Svg
+        distUrl="./assets/myanimated-title.svg"
+        viewBox="0 0 800 100"
+        keyframes={[
+            {
+                name: "fadeIn",
+                frames: [
+                    { percent: "0%", style: { opacity: "0" } },
+                    { percent: "100%", style: { opacity: "1" } }
+                ]
+            }
+        ]}
+        style={{
+            title: {
+                fontSize: "30px",
+                fontWeight: "bold",
+                fontFamily: "monospace",
+                animation: "fadeIn 1s ease-in-out infinite"
+            }
+        }}
+        html={`<h1 id="title">Animated Title</h1>`}
+    />
 
     <UI.Br />
 
