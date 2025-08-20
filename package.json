@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsc --w --outDir ./dist",
-    "readme": "npx ./dist ./README.jsx --watch",
+    "readme": "node ./dist/index.js ./README.jsx",
+    "readme:watch": "node ./dist/index.js ./README.jsx --watch",
     "build": "node src/scripts/build.js",
     "lint": "eslint .",
     "test": "node --test src/**/*.test.js"

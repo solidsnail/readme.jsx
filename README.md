@@ -363,6 +363,20 @@ Paypal
 
 <a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a>
 
+</td></tr><tr ><td >
+
+Accordion
+
+</td><td >
+
+`<UI.Accordion title="Title">
+                    <UI.Bold text="Content" />    
+                </UI.Accordion>`
+
+</td><td >
+
+<details ><summary >Title</summary>**Content**</details>
+
 </td></tr></table>
 <img src="./assets/readme-svg/number-headings/nb4kmu.svg" width="100%" />
 
