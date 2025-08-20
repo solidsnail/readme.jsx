@@ -1,9 +1,18 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
 
-<img src="https://img.shields.io/badge/version-0.3.0-blue?style=for-the-badge&labelColor=black&color=blue" alt="version" />
+<p align="center"><img src="https://img.shields.io/badge/version-0.4.0-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
 
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
-<img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
+<img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />
+
+**README.jsx** is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar **JSX components** to generate your documentation.
+
+This makes documentations:
+
+- 💨 Faster to write
+- ⭕ Consistent across projects
+- 👶 Easier to maintain
+
 <img src="./assets/readme-svg/number-headings/p13lye.svg" width="100%" /><img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
 <img src="./assets/readme-svg/number-headings/u66d5h.svg" width="100%" />Create a `README.jsx` file:
 
