@@ -1,8 +1,27 @@
+import { simpleHash } from "../helpers.js";
 import * as Readme from "../jsx.js"
 import { Svg } from "./svg.js";
+const fontFamily = `var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji")`;
 
-export const NumberHeading = ({ text, number, width = "100%", }: { width?: string, number: number; text: string; }) => {
-    const distUrl = `./assets/readme-svg/number-heading-${number}.svg`
+
+
+export const NumberHeading = ({ text, number, width = "100%", numberColor = "white", colors = {
+    a: "#3b82f6",
+    b: "#3b82f6",
+    c: "#3b82f6",
+    d: "#3b82f6",
+    e: "#3b82f6",
+} }: {
+    width?: string, number: number; text: string; numberColor?: string; colors?: {
+        a: string,
+        b: string,
+        c: string;
+        d: string;
+        e: string;
+    }
+}) => {
+    const hash = simpleHash(`${text}-${number}`);
+    const distUrl = `./assets/readme-svg/number-headings/${hash}.svg`
     return <Svg
         distUrl={distUrl}
         width={width}
@@ -38,7 +57,7 @@ export const NumberHeading = ({ text, number, width = "100%", }: { width?: strin
                 width: "20px",
                 height: "20px",
                 borderRadius: "50%",
-                background: "linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)",
+                background: `linear-gradient(45deg, ${colors.a} 0%, ${colors.b} 25%, ${colors.c} 50%, ${colors.d} 75%, ${colors.e} 100%)`,
                 backgroundSize: "300% 300%",
                 display: "flex",
                 alignItems: "center",
@@ -47,16 +66,16 @@ export const NumberHeading = ({ text, number, width = "100%", }: { width?: strin
                 animation: "gradientShift 3s ease infinite"
             },
             number: {
-                color: "white",
+                color: numberColor,
                 fontSize: "12px",
                 fontWeight: "bold",
-                fontFamily: "system-ui, sans-serif"
+                fontFamily
             },
             text: {
                 fontSize: "24px",
-                fontWeight: "600",
+                fontWeight: "800",
                 color: "#2c3e50",
-                fontFamily: "system-ui, sans-serif",
+                fontFamily,
                 margin: "0"
             }
         }}

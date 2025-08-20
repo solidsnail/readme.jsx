@@ -3,9 +3,9 @@
 > [!NOTE]
 > This markdown has been generated using readme.jsx
 
-<img src="./assets/readme-svg/number-heading-1.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
-<img src="./assets/readme-svg/number-heading-3.svg" width="100%" /><img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
-<img src="./assets/readme-svg/number-heading-4.svg" width="100%" />Create a `README.jsx` file:
+<img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />README.jsx is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar JSX components to generate your documentation
+<img src="./assets/readme-svg/number-headings/p13lye.svg" width="100%" /><img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
+<img src="./assets/readme-svg/number-headings/u66d5h.svg" width="100%" />Create a `README.jsx` file:
 
 ```jsx
 import { UI } from "readme.jsx";
@@ -29,7 +29,7 @@ Compile to Markdown:
 npx readme.jsx ./README.jsx
 ```
 
-<img src="./assets/readme-svg/number-heading-5.svg" width="100%" /><table ><tr ><th >
+<img src="./assets/readme-svg/number-headings/jihxle.svg" width="100%" /><table ><tr ><th >
 
 Name
 
@@ -349,10 +349,10 @@ Number Heading
 
 </td><td >
 
-<img src="./assets/readme-svg/number-heading-2.svg" width="100%" />
+<img src="./assets/readme-svg/number-headings/p13lye.svg" width="100%" />
 
 </td></tr></table>
-<img src="./assets/readme-svg/number-heading-6.svg" width="100%" />
+<img src="./assets/readme-svg/number-headings/ho8wbj.svg" width="100%" />
 
 ```jsx
 <UI.Svg
@@ -380,7 +380,7 @@ Number Heading
 ```
 
 <img src="./assets/myanimated-title.svg" />
-<img src="./assets/readme-svg/number-heading-7.svg" width="100%" />Add these scripts to your `package.json`:
+<img src="./assets/readme-svg/number-headings/fqqgov.svg" width="100%" />Add these scripts to your `package.json`:
 
 ```json
 {
@@ -391,7 +391,7 @@ Number Heading
 }
 ```
 
-<img src="./assets/readme-svg/number-heading-8.svg" width="100%" />
+<img src="./assets/readme-svg/number-headings/mbe0sa.svg" width="100%" />
 
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
 - ♻️ **Reusability** - Create custom components and templates
@@ -399,7 +399,7 @@ Number Heading
 - 📱 **Responsive** - Built-in responsive design patterns
 - ⚡ **Fast** - Efficient compilation to standard Markdown
 
-<img src="./assets/readme-svg/number-heading-9.svg" width="100%" />We welcome contributions! Here's how you can help:
+<img src="./assets/readme-svg/number-headings/pjjirv.svg" width="100%" />We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -408,4 +408,4 @@ Number Heading
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
 
-<img src="./assets/readme-svg/number-heading-10.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+<img src="./assets/readme-svg/number-headings/fq4t4j.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.

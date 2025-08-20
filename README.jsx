@@ -87,12 +87,12 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Usage" number={3} />
+    <UI.NumberHeading text="Usage" number={2} />
 
     <UI.Terminal code="npx readme.jsx ./README.jsx" distUrl="./assets/readme-svg/terminal-usage.svg" />
     <UI.Br />
 
-    <UI.NumberHeading text="Quick Start" number={4} />
+    <UI.NumberHeading text="Quick Start" number={3} />
 
     Create a <UI.Code code="README.jsx" inline /> file:
 
@@ -118,7 +118,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Available UI" number={5} />
+    <UI.NumberHeading text="Available UI" number={4} />
 
     <UI.Table rows={[
         [
@@ -494,7 +494,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Advanced Example: Animated SVG" number={6} />
+    <UI.NumberHeading text="Advanced Example: Animated SVG" number={5} />
 
 
     <UI.Code code={`<UI.Svg
@@ -547,7 +547,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Configuration" number={7} />
+    <UI.NumberHeading text="Configuration" number={6} />
 
     Add these scripts to your <UI.Code code="package.json" inline />:
 
@@ -560,7 +560,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Benefits" number={8} />
+    <UI.NumberHeading text="Benefits" number={7} />
     <UI.Br />
     <UI.List list={[
         "🔧 **IDE Support** - Full IntelliSense and autocomplete",
@@ -572,7 +572,7 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Contributing" number={9} />
+    <UI.NumberHeading text="Contributing" number={8} />
 
     We welcome contributions! Here's how you can help:
 
@@ -588,7 +588,7 @@ export default <>
     <UI.Br />
     <UI.Br />
 
-    <UI.NumberHeading text="License" number={10} />
+    <UI.NumberHeading text="License" number={9} />
 
     This project is licensed under the MIT License - see the LICENSE file for details.
 
