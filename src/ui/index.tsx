@@ -21,6 +21,7 @@ import { Svg } from "./svg.js";
 import { Badge } from "./badge.js";
 import { Terminal } from "./terminal.js";
 import { NumberHeading } from "./number-heading.js";
+import { Paypal } from "./paypal.js";
 
 export const UI = {
     Alert,
@@ -45,5 +46,6 @@ export const UI = {
     Svg,
     Terminal,
     NumberHeading,
+    Paypal,
     Badge
 }

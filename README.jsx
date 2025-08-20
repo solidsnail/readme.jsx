@@ -82,6 +82,13 @@ export default <>
     <UI.Badge leftText="version" rightText={packageJson.version} />
 
     <UI.Br />
+    <UI.Br />
+
+    <UI.Center>
+        <UI.Paypal id="X3MWorks" />
+    </UI.Center>
+
+    <UI.Br />
 
     <UI.NumberHeading text="What is README.jsx?" number={1} />
 
@@ -489,6 +496,20 @@ export default <>
             },
             {
                 content: <UI.NumberHeading text="Usage" number={2} />,
+                type: "td",
+            },
+        ],
+        [
+            {
+                content: "Paypal",
+                type: "td",
+            },
+            {
+                content: <UI.Code lang="jsx" inline code={`<UI.Paypal id="YOUR_ID" />`} />,
+                type: "td",
+            },
+            {
+                content: <UI.Paypal id="X3MWorks" />,
                 type: "td",
             },
         ],

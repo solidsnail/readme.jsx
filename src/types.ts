@@ -6,6 +6,7 @@ declare global {
                 class?: string
             }
             table: {}
+            a: { href: string }
             tr: {}
             kbd: {}
             details: {}
