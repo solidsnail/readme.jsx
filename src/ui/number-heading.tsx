@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { simpleHash } from "../helpers.js";
 import * as Readme from "../jsx.js";
 import { Svg } from "./svg.js";
