@@ -1,5 +1,7 @@
 import { UI } from "./dist/ui/index.js"
 
+
+const fontFamily = `var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji")`
 const Logo = () => {
     const distUrl = "./assets/readme-svg/logo.svg"
     return <UI.Svg
@@ -24,7 +26,7 @@ const Logo = () => {
         ]}
         style={{
             container: {
-                fontFamily: "'Inter', -apple-system, system-ui, sans-serif",
+                fontFamily,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
