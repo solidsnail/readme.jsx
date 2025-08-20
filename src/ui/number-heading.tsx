@@ -28,6 +28,14 @@ export const NumberHeading = ({ text, number, width = "100%", numberColor = "whi
         viewBox="0 0 800 100"
         keyframes={[
             {
+                name: "bounce",
+                frames: [
+                    { percent: "0%", style: { transform: "translateY(0px)" } },
+                    { percent: "50%", style: { transform: "translateY(-10px)" } },
+                    { percent: "100%", style: { transform: "translateY(0px)" } },
+                ]
+            },
+            {
                 name: "gradientShift",
                 frames: [
                     { percent: "0%", style: { backgroundPosition: "0% 50%" } },
@@ -63,13 +71,13 @@ export const NumberHeading = ({ text, number, width = "100%", numberColor = "whi
                 alignItems: "center",
                 justifyContent: "center",
                 marginRight: "16px",
-                animation: "gradientShift 3s ease infinite"
+                animation: "gradientShift 3s ease infinite, bounce 2s ease-in-out infinite"
             },
             number: {
                 color: numberColor,
                 fontSize: "12px",
                 fontWeight: "bold",
-                fontFamily
+                fontFamily,
             },
             text: {
                 fontSize: "24px",
