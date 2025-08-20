@@ -29,6 +29,7 @@ export function transpileJSX(filePath: string): string {
             target: ts.ScriptTarget.ES2020,
             allowJs: true,
             esModuleInterop: true,
+            resolveJsonModule: true,
         },
         fileName: path.basename(filePath),
     };

@@ -15,5 +15,5 @@ export const Badge = ({
 
     const right = rightText ? "-" + encodeURIComponent(rightText) : ""
     const rightC = rightColor ? `-${rightColor}` : ""
-    return `<img src="https://img.shields.io/badge/${encodeURIComponent(leftText)}${right}${rightC}?style=${variant}&labelColor=${leftColor}&color=${rightColor}" alt="${leftText}" />`;
+    return `<img src="https://img.shields.io/badge/${encodeURIComponent(leftText)}${right}${rightC}?style=${variant}&labelColor=${encodeURIComponent(leftColor)}&color=${encodeURIComponent(rightColor)}" alt="${leftText}" />`;
 }

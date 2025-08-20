@@ -1,7 +1,10 @@
 import { UI } from "./dist/ui/index.js"
+import packageJson from "./package.json" with  { type: "json" }
 
 
 const fontFamily = `var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji")`
+const color = "#3b82f6"
+
 const Logo = () => {
     const distUrl = "./assets/readme-svg/logo.svg"
     return <UI.Svg
@@ -58,7 +61,7 @@ const Logo = () => {
                 left: "2px",
                 width: "8px",
                 height: "8px",
-                backgroundColor: "#3b82f6",
+                backgroundColor: color,
                 borderRadius: "50%",
                 animation: "dotBounce 2s ease-in-out infinite"
             }
@@ -76,7 +79,7 @@ export default <>
     <UI.Br />
     <UI.Br />
 
-    <UI.Alert type="NOTE" text="This markdown has been generated using readme.jsx" />
+    <UI.Badge leftText="version" rightText={packageJson.version} />
 
     <UI.Br />
 
@@ -453,11 +456,11 @@ export default <>
                 type: "td",
             },
             {
-                content: <UI.Code lang="jsx" inline code={`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="yellow" rightColor="red" />`} />,
+                content: <UI.Code lang="jsx" inline code={`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="${color}" rightColor="red" />`} />,
                 type: "td",
             },
             {
-                content: <UI.Badge leftText="The badge" rightText="Suffix" leftColor="yellow" rightColor="red" />,
+                content: <UI.Badge leftText="The badge" rightText="Suffix" leftColor={color} rightColor="red" />,
                 type: "td",
             },
         ],
@@ -494,8 +497,13 @@ export default <>
 
     <UI.Br />
 
-    <UI.NumberHeading text="Advanced Example: Animated SVG" number={5} />
+    <UI.NumberHeading text="Advanced Example:" number={5} />
 
+    <UI.Br />
+    <UI.Br />
+    <UI.Bold text="Animated SVG" />
+    <UI.Br />
+    <UI.Br />
 
     <UI.Code code={`<UI.Svg
     distUrl="./assets/myanimated-title.svg"
@@ -546,6 +554,15 @@ export default <>
     />
 
     <UI.Br />
+    <UI.Br />
+    <UI.Bold text="Import package.json values" />
+    <UI.Br />
+    <UI.Br />
+
+    <UI.Code code={`import packageJson from "./package.json" with  { type: "json" };
+        
+ <UI.Badge leftText="version" rightText={packageJson.version} />`} lang="jsx" />
+
 
     <UI.NumberHeading text="Configuration" number={6} />
 
