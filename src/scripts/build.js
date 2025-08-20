@@ -25,7 +25,6 @@ const main = async () => {
             prettier: "^3.6.2"
           },
           exports: {
-            "./themes/*.css": "./themes/*.css",
             ".": {
               import: "./index.js",
               types: "./index.d.ts",
@@ -48,7 +47,6 @@ const main = async () => {
         "   "
       )
     );
-    await fs.cp("src/themes", "dist/themes", { recursive: true });
     await fs.copyFile("README.md", "dist/README.md");
     await fs.copyFile("LICENSE", "dist/LICENSE");
     console.log("*** Build finished succesfully ***");
