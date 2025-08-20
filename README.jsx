@@ -44,7 +44,6 @@ const Logo = () => {
           fontWeight: "800",
           color: "#1f2937",
           letterSpacing: "-1px",
-          margin: 0,
           animation: "fadeIn 0.8s ease-out",
           position: "relative",
         },
@@ -54,6 +53,7 @@ const Logo = () => {
           position: "relative",
           position: "absolute",
           top: "40px",
+          right: "-70px",
         },
         dot: {
           position: "absolute",
@@ -79,7 +79,14 @@ export default (
     </UI.Center>
     <UI.Br />
     <UI.Br />
-    <UI.Badge leftText="version" rightText={packageJson.version} />
+    <UI.Center>
+      <UI.Badge
+        variant="flat-square"
+        rightColor={color.replace("#", "")}
+        leftText="version"
+        rightText={packageJson.version}
+      />
+    </UI.Center>
     <UI.Br />
     <UI.Br />
     <UI.Center>
