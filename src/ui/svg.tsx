@@ -2,7 +2,6 @@ import * as Readme from "../jsx.js";
 import { writeDeep } from "../helpers.js";
 import { Image } from "./image.js";
 import { rmSync } from "fs";
-import { DARK_THEME, LIGHT_THEME } from "./vars.js";
 
 type CSSValue = string | number;
 type CSSRules = Partial<CSSStyleDeclaration>;
@@ -92,8 +91,6 @@ ${frames
   const code = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="${viewBox}">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>${LIGHT_THEME}</style>
-      <style>${DARK_THEME}</style>
       <style>
 ${keyframesCSS}
 
