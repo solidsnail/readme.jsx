@@ -42,14 +42,15 @@ const Logo = () => {
         title: {
           fontSize: "64px",
           fontWeight: "800",
-          color: "#1f2937",
+          color: "inherit",
           letterSpacing: "-1px",
           animation: "fadeIn 0.8s ease-out",
           position: "relative",
         },
         jsx: {
           fontWeight: "300",
-          color: "#6b7280",
+          color: "inherit",
+          opacity: 0.7,
           position: "relative",
           position: "absolute",
           top: "40px",
