@@ -1,8 +1,6 @@
-import { UI, THEME_VARS } from "./dist/ui/index.js";
+import { UI } from "./dist/ui/index.js";
 import packageJson from "./package.json" with { type: "json" };
 
-const fontColor = THEME_VARS["--fgColor-default"];
-const fontFamily = THEME_VARS["--font-family"];
 const color = "#3b82f6";
 
 const Logo = () => {
@@ -30,7 +28,6 @@ const Logo = () => {
       ]}
       style={{
         container: {
-          fontFamily,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -43,14 +40,12 @@ const Logo = () => {
         title: {
           fontSize: "64px",
           fontWeight: "800",
-          color: fontColor,
           letterSpacing: "-1px",
           animation: "fadeIn 0.8s ease-out",
           position: "relative",
         },
         jsx: {
           fontWeight: "300",
-          color: fontColor,
           opacity: 0.7,
           position: "relative",
           position: "absolute",
@@ -685,6 +680,22 @@ export default <>
             type: "td",
           },
         ],
+        [
+          {
+            content: "Tag",
+            type: "td",
+          },
+          {
+            content: (
+              <UI.Code lang="jsx" inline code={`<UI.Tag type="wordpress" />`} />
+            ),
+            type: "td",
+          },
+          {
+            content: <UI.Tag type="wordpress" />,
+            type: "td",
+          },
+        ],
       ]}
     />
     <UI.Br />
@@ -720,33 +731,31 @@ export default <>
       lang="jsx"
     />
     <UI.Br />
-    <UI.Boxed>
-      <UI.Br />
-      <UI.Svg
-        distUrl="./assets/myanimated-title.svg"
-        viewBox="0 0 800 100"
-        keyframes={[
-          {
-            name: "fadeIn",
-            frames: [
-              { percent: "0%", style: { opacity: "0" } },
-              { percent: "100%", style: { opacity: "1" } },
-            ],
-          },
-        ]}
-        style={{
-          title: {
-            fontSize: "30px",
-            fontWeight: "bold",
-            fontFamily: "monospace",
-            animation: "fadeIn 1s ease-in-out infinite",
-          },
-        }}
-        html={`<h1 id="title">Animated Title</h1>`}
-      />
-      <UI.Br />
-    </UI.Boxed>
     <UI.Br />
+    <UI.Svg
+      distUrl="./assets/myanimated-title.svg"
+      viewBox="0 0 800 100"
+      keyframes={[
+        {
+          name: "fadeIn",
+          frames: [
+            { percent: "0%", style: { opacity: "0" } },
+            { percent: "100%", style: { opacity: "1" } },
+          ],
+        },
+      ]}
+      style={{
+        title: {
+          fontSize: "30px",
+          fontWeight: "bold",
+          fontFamily: "monospace",
+          animation: "fadeIn 1s ease-in-out infinite",
+        },
+      }}
+      html={`<h1 id="title">Animated Title</h1>`}
+    />
+    <UI.Br />
+    <UI.Hr />
     <UI.Heading order={3} text="Import package.json values" />
     <UI.Br />
     <UI.Code
@@ -756,24 +765,6 @@ export default <>
       lang="jsx"
     />
     <UI.Br />
-    <UI.Heading order={3} text="Use github css theme variables" />
-    <UI.Br />
-    <UI.Code
-      code={`import { THEME_VARS } from "readme.jsx/ui/index.js";
-        
- <UI.Svg
-    distUrl="./assets/mytitle.svg"
-    viewBox="0 0 800 100"
-    style={{
-      title: {
-        color:  THEME_VARS["--fgColor-default"],
-        fontFamily: THEME_VARS["--font-family"],
-      },
-    }}
-    html={\`<h1 id="title">Animated Title</h1>\`}
-  />`}
-      lang="jsx"
-    />
     <UI.NumberHeading text="Configuration" number={6} />
     Add these scripts to your <UI.Code code="package.json" inline />:
     <UI.Code

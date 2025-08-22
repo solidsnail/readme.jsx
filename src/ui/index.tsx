@@ -22,7 +22,7 @@ import { Badge } from "./badge.js";
 import { Terminal } from "./terminal.js";
 import { NumberHeading } from "./number-heading.js";
 import { Paypal } from "./paypal.js";
-import { CSS_VARS } from "./vars.js";
+import { Tag } from "./tag.js";
 
 export const UI = {
   Alert,
@@ -49,6 +49,5 @@ export const UI = {
   NumberHeading,
   Paypal,
   Badge,
+  Tag,
 };
-
-export const THEME_VARS = CSS_VARS;
