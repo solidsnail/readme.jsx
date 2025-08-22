@@ -1,7 +1,10 @@
 import { simpleHash } from "../helpers.js";
 import * as Readme from "../jsx.js";
 import { Svg } from "./svg.js";
+import { CSS_VARS } from "./vars.js";
+
 const fontFamily = `var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji")`;
+const fontColor = CSS_VARS["--fgColor-default"];
 
 export const NumberHeading = ({
   text,
@@ -88,7 +91,7 @@ export const NumberHeading = ({
         text: {
           fontSize: "24px",
           fontWeight: "800",
-          color: "#2c3e50",
+          color: fontColor,
           fontFamily,
           margin: "0",
         },
