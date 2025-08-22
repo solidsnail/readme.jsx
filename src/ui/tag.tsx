@@ -1,3 +1,6 @@
+import * as Readme from "../jsx.js";
+import { Image } from "./image.js";
+
 const TAGS = {
   codecov:
     "https://img.shields.io/badge/Codecov-F01F7A?style=for-the-badge&logo=Codecov&logoColor=white",
@@ -86,5 +89,5 @@ const TAGS = {
 };
 
 export const Tag = ({ type }: { type: keyof typeof TAGS }) => {
-  return TAGS[type];
+  return <Image src={TAGS[type]} />;
 };
