@@ -1,6 +1,6 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
 
-<p align="center"><img src="https://img.shields.io/badge/version-0.4.0-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
+<p align="center"><img src="https://img.shields.io/badge/version-0.5.0-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
 
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
 <img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />
@@ -389,7 +389,7 @@ Accordion
 </td></tr></table>
 <img src="./assets/readme-svg/number-headings/nb4kmu.svg" width="100%" />
 
-**Animated SVG**
+### Animated SVG
 
 ```jsx
 <UI.Svg
@@ -416,14 +416,34 @@ Accordion
 />
 ```
 
+<table ><tr ><td >
 <img src="./assets/myanimated-title.svg" />
+</td></tr></table>
 
-**Import package.json values**
+### Import package.json values
 
 ```jsx
 import packageJson from "./package.json" with { type: "json" };
 
 <UI.Badge leftText="version" rightText={packageJson.version} />;
+```
+
+### Use github css theme variables
+
+```jsx
+import { THEME_VARS } from "readme.jsx/ui/index.js";
+
+<UI.Svg
+  distUrl="./assets/mytitle.svg"
+  viewBox="0 0 800 100"
+  style={{
+    title: {
+      color: THEME_VARS["--fgColor-default"],
+      fontFamily: THEME_VARS["--font-family"],
+    },
+  }}
+  html={`<h1 id="title">Animated Title</h1>`}
+/>;
 ```
 
 <img src="./assets/readme-svg/number-headings/fqqgov.svg" width="100%" />Add these scripts to your `package.json`:

@@ -22,30 +22,33 @@ import { Badge } from "./badge.js";
 import { Terminal } from "./terminal.js";
 import { NumberHeading } from "./number-heading.js";
 import { Paypal } from "./paypal.js";
+import { CSS_VARS } from "./vars.js";
 
 export const UI = {
-    Alert,
-    Code,
-    Link,
-    Hr,
-    List,
-    Center,
-    Sub,
-    Image,
-    Bold,
-    Br,
-    Heading,
-    Italic,
-    StrikeThrough,
-    Boxed,
-    Table,
-    Kbd,
-    Accordion,
-    Tasks,
-    Emoji,
-    Svg,
-    Terminal,
-    NumberHeading,
-    Paypal,
-    Badge
-}
+  Alert,
+  Code,
+  Link,
+  Hr,
+  List,
+  Center,
+  Sub,
+  Image,
+  Bold,
+  Br,
+  Heading,
+  Italic,
+  StrikeThrough,
+  Boxed,
+  Table,
+  Kbd,
+  Accordion,
+  Tasks,
+  Emoji,
+  Svg,
+  Terminal,
+  NumberHeading,
+  Paypal,
+  Badge,
+};
+
+export const THEME_VARS = CSS_VARS;
