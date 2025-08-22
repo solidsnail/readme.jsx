@@ -43,6 +43,7 @@ const Logo = () => {
           letterSpacing: "-1px",
           animation: "fadeIn 0.8s ease-out",
           position: "relative",
+          fontFamily: "system-ui",
         },
         jsx: {
           fontWeight: "300",
@@ -51,6 +52,7 @@ const Logo = () => {
           position: "absolute",
           top: "40px",
           right: "-70px",
+          fontFamily: "system-ui",
         },
         dot: {
           position: "absolute",
@@ -61,6 +63,7 @@ const Logo = () => {
           backgroundColor: color,
           borderRadius: "50%",
           animation: "dotBounce 2s ease-in-out infinite",
+          fontFamily: "system-ui",
         },
       }}
       html={`<div id="container">
@@ -504,6 +507,40 @@ export default <>
           },
           {
             content: <UI.Sub text="2" />,
+            type: "td",
+          },
+        ],
+        [
+          {
+            content: "Supscript",
+            type: "td",
+          },
+          {
+            content: <UI.Code lang="jsx" inline code="<UI.Sup text='2' />" />,
+            type: "td",
+          },
+          {
+            content: <UI.Sup text="2" />,
+            type: "td",
+          },
+        ],
+        [
+          {
+            content: "Emoji",
+            type: "td",
+          },
+          {
+            content: (
+              <UI.Code
+                lang="jsx"
+                inline
+                code="<UI.Emoji emjoji=':arrow_backward:' />"
+              />
+            ),
+            type: "td",
+          },
+          {
+            content: <UI.Emoji emjoji=":arrow_backward:" />,
             type: "td",
           },
         ],

@@ -278,6 +278,28 @@ Subscript
 
 </td></tr><tr ><td >
 
+Supscript
+
+</td><td >
+
+`<UI.Sup text='2' />`
+
+</td><td >
+
+</td></tr><tr ><td >
+
+Emoji
+
+</td><td >
+
+`<UI.Emoji emjoji=':arrow_backward:' />`
+
+</td><td >
+
+:arrow_backward:
+
+</td></tr><tr ><td >
+
 Horizontal Rule
 
 </td><td >
