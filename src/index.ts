@@ -40,20 +40,19 @@ export function transpileJSX(filePath: string): string {
 
 async function build() {
   try {
+    const projectRoot = process.cwd();
+    const readmeJSPath = path.join(projectRoot, "README.js");
+    const readmeMDPath = path.join(projectRoot, "README.md");
     const content =
       'import * as Readme from "./dist/jsx.js";\n\n' + transpileJSX(filepath);
-    writeDeep("./README.js", content);
+    writeDeep(readmeJSPath, content);
 
     const mod = await import(
-      new URL("../README.js", import.meta.url).toString() + `?t=${Date.now()}`
+      new URL(readmeJSPath, import.meta.url).toString() + `?t=${Date.now()}`
     );
     const formatted = await prettier.format(mod.default, {
       parser: "markdown",
     });
-
-    const projectRoot = process.cwd();
-    const readmeJSPath = path.join(projectRoot, "README.js");
-    const readmeMDPath = path.join(projectRoot, "README.md");
 
     fs.rmSync(readmeJSPath);
     writeDeep(readmeMDPath, formatted);
