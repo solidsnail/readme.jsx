@@ -11,8 +11,7 @@ const main = async () => {
       JSON.stringify(
         {
           name: "readme.jsx",
-          description:
-            "A jsx to README.md compiler",
+          description: "A jsx to README.md compiler",
           license: "MIT",
           type: "module",
           private: false,
@@ -22,7 +21,7 @@ const main = async () => {
           },
           bin: "./index.js",
           dependencies: {
-            prettier: "^3.6.2"
+            prettier: "^3.6.2",
           },
           exports: {
             ".": {
@@ -41,11 +40,15 @@ const main = async () => {
               import: "./types.js",
               types: "./types.d.ts",
             },
+            "./jsx.js": {
+              import: "./jsx.js",
+              types: "./jsx.d.ts",
+            },
           },
         },
         null,
-        "   "
-      )
+        "   ",
+      ),
     );
     await fs.copyFile("README.md", "dist/README.md");
     await fs.copyFile("LICENSE", "dist/LICENSE");
