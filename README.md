@@ -1,6 +1,6 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
 
-<p align="center"><img src="https://img.shields.io/badge/version-0.6.1-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
+<p align="center"><img src="https://img.shields.io/badge/version-0.6.2-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
 
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
 <img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />
