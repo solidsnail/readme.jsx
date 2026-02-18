@@ -44,7 +44,8 @@ async function build() {
     const readmeJSPath = path.join(projectRoot, "README.js");
     const readmeMDPath = path.join(projectRoot, "README.md");
     const content =
-      'import * as Readme from "./dist/jsx.js";\n\n' + transpileJSX(filepath);
+      'import * as Readme from "readme.jsx/jsx.js";\n\n' +
+      transpileJSX(filepath);
     writeDeep(readmeJSPath, content);
 
     const mod = await import(
