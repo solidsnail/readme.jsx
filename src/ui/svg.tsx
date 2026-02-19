@@ -44,7 +44,7 @@ function rulesToCss(rules: CSSRules) {
 function normalizeSelector(selector: string) {
   // If the user already passed "#title" or a complex selector, respect it.
   if (
-    /^[#.\[\w-]/.test(selector) &&
+    /^[#.[\w-]/.test(selector) &&
     (selector.startsWith("#") ||
       selector.startsWith(".") ||
       selector.startsWith("["))

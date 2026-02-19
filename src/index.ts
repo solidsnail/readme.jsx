@@ -64,13 +64,20 @@ async function build() {
   }
 }
 
-if (watchMode) {
-  console.log(`👀 Watching for changes in ${filepath}...`);
-  fs.watchFile(filepath, { interval: 500 }, () => {
-    console.log("🔄 Change detected, rebuilding...");
+const isMain =
+  process.argv[1]?.endsWith("index.js") ||
+  process.argv[1]?.endsWith("index.ts") ||
+  process.argv[1]?.includes(".bin");
+
+if (isMain && filepath) {
+  if (watchMode) {
+    console.log(`👀 Watching for changes in ${filepath}...`);
+    fs.watchFile(filepath, { interval: 500 }, () => {
+      console.log("🔄 Change detected, rebuilding...");
+      build();
+    });
     build();
-  });
-  build();
-} else {
-  build();
+  } else {
+    build();
+  }
 }
