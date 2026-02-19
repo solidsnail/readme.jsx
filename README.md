@@ -443,36 +443,77 @@ Tag
 
 </td></tr></table>
 
-## Advanced Example:
+## 💎 Advanced Showcase
 
-### Animated SVG
+Documentation doesn't have to be boring. Use advanced `UI.Svg` features to create interactive-feeling elements.
+
+### Animated Feature Card
 
 ```jsx
 <UI.Svg
-  distUrl="./assets/myanimated-title.svg"
-  viewBox="0 0 800 100"
+  distUrl="./assets/feature-card.svg"
+  viewBox="0 0 800 240"
   keyframes={[
     {
-      name: "fadeIn",
+      name: "pulse",
       frames: [
-        { percent: "0%", style: { opacity: "0" } },
-        { percent: "100%", style: { opacity: "1" } },
+        { percent: "0%", style: { transform: "scale(1)", opacity: "0.5" } },
+        { percent: "50%", style: { transform: "scale(1.05)", opacity: "0.8" } },
+        { percent: "100%", style: { transform: "scale(1)", opacity: "0.5" } },
       ],
     },
   ]}
   style={{
-    title: {
-      fontSize: "30px",
+    card: {
+      background: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
+      borderRadius: "20px",
+      padding: "30px",
+      color: "white",
+      fontFamily: "system-ui",
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+    },
+    icon: {
+      width: "80px",
+      height: "80px",
+      background: "rgba(255,255,255,0.2)",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "40px",
+      animation: "pulse 2s infinite ease-in-out",
+    },
+    content: { display: "flex", flexDirection: "column" },
+    badge: {
+      background: "#facc15",
+      color: "#1e1b4b",
+      padding: "4px 10px",
+      borderRadius: "6px",
+      fontSize: "12px",
       fontWeight: "bold",
-      fontFamily: "monospace",
-      animation: "fadeIn 1s ease-in-out infinite",
+      width: "fit-content",
+      marginBottom: "8px",
     },
   }}
-  html={`<h1 id="title">Animated Title</h1>`}
+  html={`
+        <div id="card">
+            <div id="icon">✨</div>
+            <div id="content">
+                <div id="badge">NEW FEATURE</div>
+                <h2 style="margin: 0; font-size: 32px">Dynamic SVG Components</h2>
+                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 18px">
+                    Inject raw HTML and CSS into your README with full 
+                    animation support and responsive layouts.
+                </p>
+            </div>
+        </div>
+    `}
 />
 ```
 
-<img src="./assets/myanimated-title.svg" />
+<img src="./assets/feature-card.svg" />
 
 ---
 
