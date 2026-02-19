@@ -8,52 +8,85 @@ const Logo = () => {
   return (
     <UI.Svg
       distUrl={distUrl}
-      viewBox="0 0 800 150"
+      viewBox="0 0 800 200"
       keyframes={[
         {
-          name: "fadeIn",
+          name: "shimmer",
           frames: [
-            { percent: "0%", style: { opacity: "0" } },
-            { percent: "50%", style: { opacity: "1" } },
-            { percent: "100%", style: { opacity: "0" } },
+            { percent: "0%", style: { transform: "translateX(-100%)" } },
+            { percent: "100%", style: { transform: "translateX(100%)" } },
+          ],
+        },
+        {
+          name: "float",
+          frames: [
+            { percent: "0%", style: { transform: "translateY(0px)" } },
+            { percent: "50%", style: { transform: "translateY(-10px)" } },
+            { percent: "100%", style: { transform: "translateY(0px)" } },
           ],
         },
       ]}
       style={{
         container: {
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
-          height: 120,
+          height: 180,
+          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+          borderRadius: "16px",
+          color: "white",
+          fontFamily: "system-ui, -apple-system, sans-serif",
+          overflow: "hidden",
+          position: "relative",
+        },
+        titleWrapper: {
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          zIndex: 2,
         },
         title: {
-          fontSize: "64px",
-          fontWeight: "800",
-          letterSpacing: "-1px",
-          fontFamily: "system-ui",
-          background: "black",
-          color: "white",
-          padding: "0px 20px 0px 10px",
+          fontSize: "72px",
+          fontWeight: "900",
+          letterSpacing: "-2px",
+          margin: 0,
         },
-        dot: {
-          fontSize: "64px",
-          fontWeight: "400",
-          fontFamily: "system-ui",
-          position: "absolute",
-        },
-        jsx: {
-          fontSize: "64px",
-          fontWeight: "400",
-          fontFamily: "system-ui",
-          background: "yellow",
-          color: "black",
-          padding: "0px 5px 0px 10px",
+        jsxBadge: {
+          background: "#facc15",
+          color: "#0f172a",
+          padding: "4px 12px",
+          borderRadius: "8px",
+          fontSize: "32px",
+          fontWeight: "bold",
           textTransform: "uppercase",
+        },
+        subtitle: {
+          fontSize: "18px",
+          opacity: 0.8,
+          marginTop: "8px",
+          zIndex: 2,
+        },
+        shimmer: {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "50%",
+          height: "100%",
+          background:
+            "linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)",
+          animation: "shimmer 3s infinite linear",
+          zIndex: 1,
         },
       }}
       html={`<div id="container">
-    <h1 id="title"><span>README</span> <span id="dot">.</span> </h1> <span id="jsx">jsx</span>
+    <div id="shimmer"></div>
+    <div id="titleWrapper">
+      <h1 id="title">README<span style="color: #facc15">.</span></h1>
+      <span id="jsxBadge">jsx</span>
+    </div>
+    <p id="subtitle">The JSX-to-Markdown Transpiler</p>
 </div>`}
     />
   );
@@ -64,37 +97,70 @@ export default (
       <Logo />
     </UI.Center>
     <UI.Br />
-    <UI.Br />
     <UI.Center>
       <UI.Badge
         variant="for-the-badge"
-        rightColor={color.replace("#", "")}
+        rightColor="facc15"
         leftText="version"
         rightText={packageJson.version}
+        leftColor="0f172a"
+      />
+      <UI.Badge
+        variant="for-the-badge"
+        rightColor="0ea5e9"
+        leftText="license"
+        rightText="MIT"
+        leftColor="0f172a"
       />
     </UI.Center>
-    <UI.Br />
     <UI.Br />
     <UI.Center>
       <UI.Paypal id="X3MWorks" />
     </UI.Center>
     <UI.Br />
-    <UI.Heading text="What is README.jsx?" order={2} />
+    <UI.Hr />
+    <UI.Heading text="✨ What is README.jsx?" order={2} />
+    <UI.Boxed>
+      <UI.Bold text="README.jsx" /> is a modern JSX-to-Markdown transpiler. It
+      allows you to leverage the power of <UI.Bold text="JSX components" /> to
+      build beautiful, consistent, and maintainable documentation without ever
+      touching raw Markdown.
+    </UI.Boxed>
     <UI.Br />
-    <UI.Br />
-    <UI.Bold text="README.jsx" /> is a JSX-to-Markdown transpiler. Instead of
-    wrestling with raw Markdown syntax, you can use familiar{" "}
-    <UI.Bold text="JSX components" /> to generate your documentation.
-    <UI.Br />
-    <UI.Br /> This makes documentations:
+    <UI.Heading text="🚀 Why use it?" order={3} />
     <UI.List
       list={[
-        "💨 Faster to write",
-        "⭕ Consistent across projects",
-        "👶 Easier to maintain",
+        "� **Lightning Fast** - Write documentation at the speed of thought.",
+        "🛠️ **Component-Based** - Build reusable UI patterns for your READMEs.",
+        "✅ **Type-Safe** - Full IntelliSense support for your documentation elements.",
+        "🎨 **Rich Visuals** - Easily embed animated SVGs and styled badges.",
       ]}
     />
     <UI.Br />
+    <UI.Hr />
+    <UI.Br />
+    <UI.Hr />
+    <UI.Heading text="🛠️ Creating Custom Components" order={2} />
+    Creating your own components is easy! Just define a function that returns a
+    string or other UI elements:
+    <UI.Code
+      code={`const MyBadge = ({ text }) => (
+  <UI.Badge 
+    leftText="Status" 
+    rightText={text} 
+    rightColor="green" 
+  />
+);
+
+export default (
+  <UI.Center>
+    <MyBadge text="Online" />
+  </UI.Center>
+);`}
+      lang="jsx"
+    />
+    <UI.Br />
+    <UI.Hr />
     <UI.Heading text="Usage" order={2} />
     <UI.Terminal
       code="npx readme.jsx ./README.jsx"
@@ -124,7 +190,9 @@ export default <>
     Transpile to Markdown:
     <UI.Code code="npx readme.jsx ./README.jsx" lang="bash" />
     <UI.Br />
-    <UI.Heading text="Available UI" order={2} />
+    <UI.Heading text="🧱 Available UI Components" order={2} />
+    Explore the built-in components you can use to build your documentation.
+    <UI.Br />
     <UI.Table
       rows={[
         [

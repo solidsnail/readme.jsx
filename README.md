@@ -1,18 +1,41 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
-
-<p align="center"><img src="https://img.shields.io/badge/version-0.6.8-white?style=for-the-badge&labelColor=black&color=white" alt="version" /></p>
-
+<p align="center"><img src="https://img.shields.io/badge/version-0.6.8-facc15?style=for-the-badge&labelColor=0f172a&color=facc15" alt="version" /><img src="https://img.shields.io/badge/license-MIT-0ea5e9?style=for-the-badge&labelColor=0f172a&color=0ea5e9" alt="license" /></p>
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
 
-## What is README.jsx?
+---
 
-**README.jsx** is a JSX-to-Markdown transpiler. Instead of wrestling with raw Markdown syntax, you can use familiar **JSX components** to generate your documentation.
+## ✨ What is README.jsx?
 
-This makes documentations:
+<table ><tr ><td >**README.jsx** is a modern JSX-to-Markdown transpiler. It allows you to leverage the power of **JSX components** to build beautiful, consistent, and maintainable documentation without ever touching raw Markdown.</td></tr></table>
 
-- 💨 Faster to write
-- ⭕ Consistent across projects
-- 👶 Easier to maintain
+### 🚀 Why use it?
+
+- � **Lightning Fast** - Write documentation at the speed of thought.
+- 🛠️ **Component-Based** - Build reusable UI patterns for your READMEs.
+- ✅ **Type-Safe** - Full IntelliSense support for your documentation elements.
+- 🎨 **Rich Visuals** - Easily embed animated SVGs and styled badges.
+
+---
+
+---
+
+## 🛠️ Creating Custom Components
+
+Creating your own components is easy! Just define a function that returns a string or other UI elements:
+
+```jsx
+const MyBadge = ({ text }) => (
+  <UI.Badge leftText="Status" rightText={text} rightColor="green" />
+);
+
+export default (
+  <UI.Center>
+    <MyBadge text="Online" />
+  </UI.Center>
+);
+```
+
+---
 
 ## Usage
 
@@ -44,7 +67,9 @@ Transpile to Markdown:
 npx readme.jsx ./README.jsx
 ```
 
-## Available UI
+## 🧱 Available UI Components
+
+Explore the built-in components you can use to build your documentation.
 
 <table ><tr ><th >
 

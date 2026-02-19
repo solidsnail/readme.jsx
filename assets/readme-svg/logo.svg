@@ -1,20 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 150">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 200">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-#container { display: flex; align-items: center; justify-content: center; width: 100%; height: 120px; }
-#title { font-size: 64px; font-weight: 800; letter-spacing: -1px; font-family: system-ui; background: black; color: white; padding: 0px 20px 0px 10px; }
-#dot { font-size: 64px; font-weight: 400; font-family: system-ui; position: absolute; }
-#jsx { font-size: 64px; font-weight: 400; font-family: system-ui; background: yellow; color: black; padding: 0px 5px 0px 10px; text-transform: uppercase; }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+#container { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 180px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; color: white; font-family: system-ui, -apple-system, sans-serif; overflow: hidden; position: relative; }
+#titleWrapper { display: flex; align-items: center; gap: 10px; z-index: 2; }
+#title { font-size: 72px; font-weight: 900; letter-spacing: -2px; margin: 0px; }
+#jsxBadge { background: #facc15; color: #0f172a; padding: 4px 12px; border-radius: 8px; font-size: 32px; font-weight: bold; text-transform: uppercase; }
+#subtitle { font-size: 18px; opacity: 0.8; margin-top: 8px; z-index: 2; }
+#shimmer { position: absolute; top: 0px; left: 0px; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); animation: shimmer 3s infinite linear; z-index: 1; }
       </style>
 <div id="container">
-    <h1 id="title"><span>README</span> <span id="dot">.</span> </h1> <span id="jsx">jsx</span>
+    <div id="shimmer"></div>
+    <div id="titleWrapper">
+      <h1 id="title">README<span style="color: #facc15">.</span></h1>
+      <span id="jsxBadge">jsx</span>
+    </div>
+    <p id="subtitle">The JSX-to-Markdown Transpiler</p>
 </div>
     </div>
   </foreignObject>
