@@ -1,4 +1,4 @@
-import { UI } from "./dist/ui/index.js";
+import { UI } from "readme.jsx/ui";
 import packageJson from "./package.json" with { type: "json" };
 
 const color = "#3b82f6";
@@ -122,15 +122,15 @@ export default (
 
 export default <>
     <UI.Heading text="My Awesome Project" />
-    
+
     <UI.Alert type="TIP" text="This README was written in JSX!" />
-    
+
     <UI.List list={[
         "Easy to write",
         "Type-safe",
         "Maintainable"
     ]} />
-    
+
     <UI.Code code={\`console.log("Hello, README.jsx!")\`} lang="javascript" />
 </>`}
       lang="jsx"
@@ -702,7 +702,7 @@ export default <>
                 lang="jsx"
                 inline
                 code={`<UI.Accordion title="Title">
-                    <UI.Bold text="Content" />    
+                    <UI.Bold text="Content" />
                 </UI.Accordion>`}
               />
             ),
@@ -797,7 +797,7 @@ export default <>
     <UI.Br />
     <UI.Code
       code={`import packageJson from "./package.json" with  { type: "json" };
-        
+
  <UI.Badge leftText="version" rightText={packageJson.version} />`}
       lang="jsx"
     />

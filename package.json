@@ -1,18 +1,18 @@
 {
   "name": "readmejsx-website",
   "private": false,
-  "version": "0.6.5",
+  "version": "0.6.6",
   "type": "module",
   "scripts": {
     "dev": "tsc --w --outDir ./dist",
-    "readme": "node ./dist/index.js ./README.jsx",
-    "readme:watch": "node ./dist/index.js ./README.jsx --watch",
+    "readme": "readme.jsx ./README.jsx",
+    "readme:watch": "readme.jsx./README.jsx --watch",
     "build": "node src/scripts/build.js",
     "lint": "eslint .",
     "test": "node --test src/**/*.test.js"
   },
   "dependencies": {
-    "readme.jsx": "file://./dist"
+    "readme.jsx": "file:./dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
