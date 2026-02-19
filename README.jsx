@@ -11,14 +11,6 @@ const Logo = () => {
       viewBox="0 0 800 150"
       keyframes={[
         {
-          name: "dotBounce",
-          frames: [
-            { percent: "0%", style: { transform: "scale(1)" } },
-            { percent: "50%", style: { transform: "scale(1.5)" } },
-            { percent: "100%", style: { transform: "scale(1)" } },
-          ],
-        },
-        {
           name: "fadeIn",
           frames: [
             { percent: "0%", style: { opacity: "0" } },
@@ -54,20 +46,9 @@ const Logo = () => {
           right: "-70px",
           fontFamily: "system-ui",
         },
-        dot: {
-          position: "absolute",
-          top: "22px",
-          left: "2px",
-          width: "8px",
-          height: "8px",
-          backgroundColor: color,
-          borderRadius: "50%",
-          animation: "dotBounce 2s ease-in-out infinite",
-          fontFamily: "system-ui",
-        },
       }}
       html={`<div id="container">
-    <h1 id="title">README<span id="jsx">jsx<span id="dot"></span></span></h1>
+    <h1 id="title">README<span id="jsx">jsx</span></h1>
 </div>`}
     />
   );
