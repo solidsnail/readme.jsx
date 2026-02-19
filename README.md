@@ -1,9 +1,10 @@
 <p align="center"><img src="./assets/readme-svg/logo.svg" /></p>
 
-<p align="center"><img src="https://img.shields.io/badge/version-0.6.7-3b82f6?style=flat-square&labelColor=black&color=3b82f6" alt="version" /></p>
+<p align="center"><img src="https://img.shields.io/badge/version-0.6.8-white?style=for-the-badge&labelColor=black&color=white" alt="version" /></p>
 
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
-<img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />
+
+## What is README.jsx?
 
 **README.jsx** is a JSX-to-Markdown transpiler. Instead of wrestling with raw Markdown syntax, you can use familiar **JSX components** to generate your documentation.
 
@@ -13,8 +14,13 @@ This makes documentations:
 - ⭕ Consistent across projects
 - 👶 Easier to maintain
 
-<img src="./assets/readme-svg/number-headings/p13lye.svg" width="100%" /><img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
-<img src="./assets/readme-svg/number-headings/u66d5h.svg" width="100%" />Create a `README.jsx` file:
+## Usage
+
+<img src="./assets/readme-svg/terminal-usage.svg" width="100%" />
+
+## Quick Start
+
+Create a `README.jsx` file:
 
 ```jsx
 import { UI } from "readme.jsx";
@@ -38,7 +44,9 @@ Transpile to Markdown:
 npx readme.jsx ./README.jsx
 ```
 
-<img src="./assets/readme-svg/number-headings/jihxle.svg" width="100%" /><table ><tr ><th >
+## Available UI
+
+<table ><tr ><th >
 
 Name
 
@@ -352,11 +360,11 @@ Badge
 
 </td><td >
 
-`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="#3b82f6" rightColor="red" />`
+`<UI.Badge leftText="The badge" rightText="Suffix" leftColor="white" rightColor="red" />`
 
 </td><td >
 
-<img src="https://img.shields.io/badge/The%20badge-Suffix-red?style=for-the-badge&labelColor=%233b82f6&color=red" alt="The badge" />
+<img src="https://img.shields.io/badge/The%20badge-Suffix-red?style=for-the-badge&labelColor=white&color=red" alt="The badge" />
 
 </td></tr><tr ><td >
 
@@ -369,18 +377,6 @@ Terminal
 </td><td >
 
 <img src="./assets/readme-svg/terminal.svg" width="100%" />
-
-</td></tr><tr ><td >
-
-Number Heading
-
-</td><td >
-
-`<UI.NumberHeading text="Usage" number={2} />`
-
-</td><td >
-
-<img src="./assets/readme-svg/number-headings/p13lye.svg" width="100%" />
 
 </td></tr><tr ><td >
 
@@ -421,7 +417,8 @@ Tag
 <img src="https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white" />
 
 </td></tr></table>
-<img src="./assets/readme-svg/number-headings/nb4kmu.svg" width="100%" />
+
+## Advanced Example:
 
 ### Animated SVG
 
@@ -462,7 +459,9 @@ import packageJson from "./package.json" with { type: "json" };
 <UI.Badge leftText="version" rightText={packageJson.version} />;
 ```
 
-<img src="./assets/readme-svg/number-headings/fqqgov.svg" width="100%" />Add these scripts to your `package.json`:
+## Configuration
+
+Add these scripts to your `package.json`:
 
 ```json
 {
@@ -473,7 +472,7 @@ import packageJson from "./package.json" with { type: "json" };
 }
 ```
 
-<img src="./assets/readme-svg/number-headings/mbe0sa.svg" width="100%" />
+## Benefits
 
 - 🔧 **IDE Support** - Full IntelliSense and autocomplete
 - ♻️ **Reusability** - Create custom components and templates
@@ -481,7 +480,9 @@ import packageJson from "./package.json" with { type: "json" };
 - 📱 **Responsive** - Built-in responsive design patterns
 - ⚡ **Fast** - Efficient compilation to standard Markdown
 
-<img src="./assets/readme-svg/number-headings/pjjirv.svg" width="100%" />We welcome contributions! Here's how you can help:
+## Contributing
+
+We welcome contributions! Here's how you can help:
 
 - [x] 🍴 Fork the repository
 - [x] 🌿 Create a feature branch
@@ -490,4 +491,6 @@ import packageJson from "./package.json" with { type: "json" };
 - [ ] 📝 Update documentation
 - [ ] 🚀 Submit a pull request
 
-<img src="./assets/readme-svg/number-headings/fq4t4j.svg" width="100%" />This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

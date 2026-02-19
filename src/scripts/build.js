@@ -40,6 +40,10 @@ const main = async () => {
               import: "./types.js",
               types: "./types.d.ts",
             },
+            "./constants": {
+              import: "./constants.js",
+              types: "./constants.d.ts",
+            },
             "./jsx.js": {
               import: "./jsx.js",
               types: "./jsx.d.ts",

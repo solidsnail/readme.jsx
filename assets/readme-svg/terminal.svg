@@ -15,9 +15,9 @@
 
 #terminal { background-color: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 16px; font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace; font-size: 14px; max-width: 500px; }
 #line { color: #e6edf3; }
-#prompt { color: #7c3aed; font-weight: bold; }
+#prompt { color: yellow; font-weight: bold; }
 #command { color: #e6edf3; white-space: nowrap; overflow: hidden; display: inline-block; width: 0ch; animation: typing 2.5s steps(28) 0.5s forwards; }
-#cursor { color: #7c3aed; animation: blink 1s infinite; margin-left: 1px; }
+#cursor { color: yellow; animation: blink 1s infinite; margin-left: 1px; }
       </style>
 <div id="terminal">
     <div id="line">

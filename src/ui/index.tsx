@@ -20,7 +20,6 @@ import { Emoji } from "./emoji.js";
 import { Svg } from "./svg.js";
 import { Badge } from "./badge.js";
 import { Terminal } from "./terminal.js";
-import { NumberHeading } from "./number-heading.js";
 import { Paypal } from "./paypal.js";
 import { Tag } from "./tag.js";
 
@@ -46,7 +45,6 @@ export const UI = {
   Emoji,
   Svg,
   Terminal,
-  NumberHeading,
   Paypal,
   Badge,
   Tag,

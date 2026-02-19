@@ -1,7 +1,7 @@
 import { UI } from "readme.jsx/ui";
 import packageJson from "./package.json" with { type: "json" };
 
-const color = "#3b82f6";
+const color = "white";
 
 const Logo = () => {
   const distUrl = "./assets/readme-svg/logo.svg";
@@ -16,28 +16,6 @@ const Logo = () => {
             { percent: "0%", style: { opacity: "0" } },
             { percent: "50%", style: { opacity: "1" } },
             { percent: "100%", style: { opacity: "0" } },
-          ],
-        },
-        {
-          name: "dribble",
-          frames: [
-            { percent: "0%", style: { top: "-10px", transform: "scaleY(1)" } },
-            {
-              percent: "40%",
-              style: { top: "20px", transform: "scaleY(0.9)" },
-            },
-            {
-              percent: "50%",
-              style: { top: "30px", transform: "scaleY(0.75)" },
-            },
-            {
-              percent: "60%",
-              style: { top: "20px", transform: "scaleY(0.9)" },
-            },
-            {
-              percent: "100%",
-              style: { top: "-10px", transform: "scaleY(1)" },
-            },
           ],
         },
       ]}
@@ -63,8 +41,6 @@ const Logo = () => {
           fontWeight: "400",
           fontFamily: "system-ui",
           position: "absolute",
-          animation: "dribble 1.5s ease-out",
-          animationIterationCount: "infinite",
         },
         jsx: {
           fontSize: "64px",
@@ -73,6 +49,7 @@ const Logo = () => {
           background: "yellow",
           color: "black",
           padding: "0px 5px 0px 10px",
+          textTransform: "uppercase",
         },
       }}
       html={`<div id="container">
@@ -90,7 +67,7 @@ export default (
     <UI.Br />
     <UI.Center>
       <UI.Badge
-        variant="flat-square"
+        variant="for-the-badge"
         rightColor={color.replace("#", "")}
         leftText="version"
         rightText={packageJson.version}
@@ -102,7 +79,7 @@ export default (
       <UI.Paypal id="X3MWorks" />
     </UI.Center>
     <UI.Br />
-    <UI.NumberHeading text="What is README.jsx?" number={1} />
+    <UI.Heading text="What is README.jsx?" order={2} />
     <UI.Br />
     <UI.Br />
     <UI.Bold text="README.jsx" /> is a JSX-to-Markdown transpiler. Instead of
@@ -118,13 +95,13 @@ export default (
       ]}
     />
     <UI.Br />
-    <UI.NumberHeading text="Usage" number={2} />
+    <UI.Heading text="Usage" order={2} />
     <UI.Terminal
       code="npx readme.jsx ./README.jsx"
       distUrl="./assets/readme-svg/terminal-usage.svg"
     />
     <UI.Br />
-    <UI.NumberHeading text="Quick Start" number={3} />
+    <UI.Heading text="Quick Start" order={2} />
     Create a <UI.Code code="README.jsx" inline /> file:
     <UI.Code
       code={`import { UI } from "readme.jsx"
@@ -147,7 +124,7 @@ export default <>
     Transpile to Markdown:
     <UI.Code code="npx readme.jsx ./README.jsx" lang="bash" />
     <UI.Br />
-    <UI.NumberHeading text="Available UI" number={4} />
+    <UI.Heading text="Available UI" order={2} />
     <UI.Table
       rows={[
         [
@@ -662,26 +639,6 @@ export default <>
         ],
         [
           {
-            content: "Number Heading",
-            type: "td",
-          },
-          {
-            content: (
-              <UI.Code
-                lang="jsx"
-                inline
-                code={`<UI.NumberHeading text="Usage" number={2} />`}
-              />
-            ),
-            type: "td",
-          },
-          {
-            content: <UI.NumberHeading text="Usage" number={2} />,
-            type: "td",
-          },
-        ],
-        [
-          {
             content: "Paypal",
             type: "td",
           },
@@ -741,7 +698,7 @@ export default <>
       ]}
     />
     <UI.Br />
-    <UI.NumberHeading text="Advanced Example:" number={5} />
+    <UI.Heading text="Advanced Example:" order={2} />
     <UI.Br />
     <UI.Br />
     <UI.Heading order={3} text="Animated SVG" />
@@ -807,7 +764,7 @@ export default <>
       lang="jsx"
     />
     <UI.Br />
-    <UI.NumberHeading text="Configuration" number={6} />
+    <UI.Heading text="Configuration" order={2} />
     Add these scripts to your <UI.Code code="package.json" inline />:
     <UI.Code
       code={`{
@@ -819,7 +776,7 @@ export default <>
       lang="json"
     />
     <UI.Br />
-    <UI.NumberHeading text="Benefits" number={7} />
+    <UI.Heading text="Benefits" order={2} />
     <UI.Br />
     <UI.List
       list={[
@@ -831,7 +788,7 @@ export default <>
       ]}
     />
     <UI.Br />
-    <UI.NumberHeading text="Contributing" number={8} />
+    <UI.Heading text="Contributing" order={2} />
     We welcome contributions! Here's how you can help:
     <UI.Tasks
       list={[
@@ -845,7 +802,7 @@ export default <>
     />
     <UI.Br />
     <UI.Br />
-    <UI.NumberHeading text="License" number={9} />
+    <UI.Heading text="License" order={2} />
     This project is licensed under the MIT License - see the LICENSE file for
     details.
     <UI.Br />

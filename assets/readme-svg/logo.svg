@@ -8,18 +8,10 @@
   100% { opacity: 0; }
 }
 
-@keyframes dribble {
-  0% { top: -10px; transform: scaleY(1); }
-  40% { top: 20px; transform: scaleY(0.9); }
-  50% { top: 30px; transform: scaleY(0.75); }
-  60% { top: 20px; transform: scaleY(0.9); }
-  100% { top: -10px; transform: scaleY(1); }
-}
-
 #container { display: flex; align-items: center; justify-content: center; width: 100%; height: 120px; }
 #title { font-size: 64px; font-weight: 800; letter-spacing: -1px; font-family: system-ui; background: black; color: white; padding: 0px 20px 0px 10px; }
-#dot { font-size: 64px; font-weight: 400; font-family: system-ui; position: absolute; animation: dribble 1.5s ease-out; animation-iteration-count: infinite; }
-#jsx { font-size: 64px; font-weight: 400; font-family: system-ui; background: yellow; color: black; padding: 0px 5px 0px 10px; }
+#dot { font-size: 64px; font-weight: 400; font-family: system-ui; position: absolute; }
+#jsx { font-size: 64px; font-weight: 400; font-family: system-ui; background: yellow; color: black; padding: 0px 5px 0px 10px; text-transform: uppercase; }
       </style>
 <div id="container">
     <h1 id="title"><span>README</span> <span id="dot">.</span> </h1> <span id="jsx">jsx</span>
