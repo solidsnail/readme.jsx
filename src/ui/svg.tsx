@@ -1,7 +1,7 @@
+import path from "path";
 import * as Readme from "../jsx.js";
 import { writeDeep } from "../helpers.js";
 import { Image } from "./image.js";
-import { rmSync } from "fs";
 
 type CSSValue = string | number;
 type CSSRules = Partial<CSSStyleDeclaration>;
@@ -77,7 +77,7 @@ export const Svg = ({
 ${frames
   .map(({ percent, style }) => `  ${percent} { ${rulesToCss(style)} }`)
   .join("\n")}
-}`
+}`,
     )
     .join("\n\n");
 
@@ -100,7 +100,8 @@ ${html}
     </div>
   </foreignObject>
 </svg>`;
-  rmSync(distUrl);
-  writeDeep(distUrl, code);
+  const projectRoot = process.cwd();
+  const distUrlPath = path.join(projectRoot, distUrl);
+  writeDeep(distUrlPath, code);
   return <Image width={width} src={distUrl} />;
 };
