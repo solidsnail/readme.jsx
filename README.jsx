@@ -14,7 +14,30 @@ const Logo = () => {
           name: "fadeIn",
           frames: [
             { percent: "0%", style: { opacity: "0" } },
-            { percent: "100%", style: { opacity: "1" } },
+            { percent: "50%", style: { opacity: "1" } },
+            { percent: "100%", style: { opacity: "0" } },
+          ],
+        },
+        {
+          name: "dribble",
+          frames: [
+            { percent: "0%", style: { top: "-10px", transform: "scaleY(1)" } },
+            {
+              percent: "40%",
+              style: { top: "20px", transform: "scaleY(0.9)" },
+            },
+            {
+              percent: "50%",
+              style: { top: "30px", transform: "scaleY(0.75)" },
+            },
+            {
+              percent: "60%",
+              style: { top: "20px", transform: "scaleY(0.9)" },
+            },
+            {
+              percent: "100%",
+              style: { top: "-10px", transform: "scaleY(1)" },
+            },
           ],
         },
       ]}
@@ -25,30 +48,35 @@ const Logo = () => {
           justifyContent: "center",
           width: "100%",
           height: 120,
-          background: "transparent",
-          textAlign: "center",
-          position: "relative",
         },
         title: {
           fontSize: "64px",
           fontWeight: "800",
           letterSpacing: "-1px",
-          animation: "fadeIn 0.8s ease-out",
-          position: "relative",
           fontFamily: "system-ui",
+          background: "black",
+          color: "white",
+          padding: "0px 20px 0px 10px",
+        },
+        dot: {
+          fontSize: "64px",
+          fontWeight: "400",
+          fontFamily: "system-ui",
+          position: "absolute",
+          animation: "dribble 1.5s ease-out",
+          animationIterationCount: "infinite",
         },
         jsx: {
-          fontWeight: "300",
-          opacity: 0.7,
-          position: "relative",
-          position: "absolute",
-          top: "40px",
-          right: "-70px",
+          fontSize: "64px",
+          fontWeight: "400",
           fontFamily: "system-ui",
+          background: "yellow",
+          color: "black",
+          padding: "0px 5px 0px 10px",
         },
       }}
       html={`<div id="container">
-    <h1 id="title">README<span id="jsx">jsx</span></h1>
+    <h1 id="title"><span>README</span> <span id="dot">.</span> </h1> <span id="jsx">jsx</span>
 </div>`}
     />
   );
@@ -77,7 +105,7 @@ export default (
     <UI.NumberHeading text="What is README.jsx?" number={1} />
     <UI.Br />
     <UI.Br />
-    <UI.Bold text="README.jsx" /> is a JSX-to-Markdown compiler. Instead of
+    <UI.Bold text="README.jsx" /> is a JSX-to-Markdown transpiler. Instead of
     wrestling with raw Markdown syntax, you can use familiar{" "}
     <UI.Bold text="JSX components" /> to generate your documentation.
     <UI.Br />
@@ -116,7 +144,7 @@ export default <>
 </>`}
       lang="jsx"
     />
-    Compile to Markdown:
+    Transpile to Markdown:
     <UI.Code code="npx readme.jsx ./README.jsx" lang="bash" />
     <UI.Br />
     <UI.NumberHeading text="Available UI" number={4} />
@@ -512,16 +540,12 @@ export default <>
           },
           {
             content: (
-              <UI.Code
-                lang="jsx"
-                inline
-                code="<UI.Emoji emjoji=':arrow_backward:' />"
-              />
+              <UI.Code lang="jsx" inline code="<UI.Emoji emjoji=':smile:' />" />
             ),
             type: "td",
           },
           {
-            content: <UI.Emoji emjoji=":arrow_backward:" />,
+            content: <UI.Emoji emjoji=":smile:" />,
             type: "td",
           },
         ],

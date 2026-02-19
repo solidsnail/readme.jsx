@@ -14,12 +14,12 @@
 }
 
 #container { width: 100%; height: 40px; display: flex; align-items: center; margin: 24px 0; background: transparent; animation: fadeIn 0.8s ease-out; }
-#circle { width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(45deg, #3b82f6 0%, #3b82f6 25%, #3b82f6 50%, #3b82f6 75%, #3b82f6 100%); background-size: 300% 300%; display: flex; align-items: center; justify-content: center; margin-right: 16px; }
-#number { color: white; font-size: 12px; font-weight: bold; font-family: var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"); }
-#text { font-size: 24px; font-weight: 800; color: var(--fgColor-default); font-family: var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"); margin: 0; }
+#box { width: 20px; height: 20px; background: linear-gradient(45deg, yellow 0%, yellow 25%, yellow 50%, yellow 75%, yellow 100%); background-size: 300% 300%; display: flex; align-items: center; justify-content: center; margin-right: 16px; outline: 1.2px solid #000; margin-left: 10px; }
+#number { color: black; font-size: 12px; font-weight: bold; font-family: var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"); }
+#text { font-size: 24px; font-weight: 800; color: white; font-family: var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"); margin: 0; text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000; }
       </style>
 <div id="container">
-        <div id="circle">
+        <div id="box">
             <span id="number">1</span>
         </div>
         <h2 id="text">What is README.jsx?</h2>

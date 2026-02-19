@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc --w --outDir ./dist",
     "readme": "readme.jsx ./README.jsx",
-    "readme:watch": "readme.jsx./README.jsx --watch",
+    "readme:watch": "readme.jsx ./README.jsx --watch",
     "build": "node src/scripts/build.js",
     "lint": "eslint .",
     "test": "node --test src/**/*.test.js"

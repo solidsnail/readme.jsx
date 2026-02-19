@@ -5,7 +5,7 @@
 <p align="center"><a href="https://www.paypal.com/paypalme/X3MWorks"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" width="130" /></a></p>
 <img src="./assets/readme-svg/number-headings/twdiiu.svg" width="100%" />
 
-**README.jsx** is a JSX-to-Markdown compiler. Instead of wrestling with raw Markdown syntax, you can use familiar **JSX components** to generate your documentation.
+**README.jsx** is a JSX-to-Markdown transpiler. Instead of wrestling with raw Markdown syntax, you can use familiar **JSX components** to generate your documentation.
 
 This makes documentations:
 
@@ -32,7 +32,7 @@ export default (
 );
 ```
 
-Compile to Markdown:
+Transpile to Markdown:
 
 ```bash
 npx readme.jsx ./README.jsx
@@ -292,11 +292,11 @@ Emoji
 
 </td><td >
 
-`<UI.Emoji emjoji=':arrow_backward:' />`
+`<UI.Emoji emjoji=':smile:' />`
 
 </td><td >
 
-:arrow_backward:
+:smile:
 
 </td></tr><tr ><td >
 

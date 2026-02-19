@@ -3,19 +3,20 @@ import * as Readme from "../jsx.js";
 import { Svg } from "./svg.js";
 
 const fontFamily = `var(--fontStack-sansSerif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji")`;
-const fontColor = "var(--fgColor-default)";
+const fontColor = "white";
+const textShadowWidth = "1.2px";
 
 export const NumberHeading = ({
   text,
   number,
   width = "100%",
-  numberColor = "white",
+  numberColor = "black",
   colors = {
-    a: "#3b82f6",
-    b: "#3b82f6",
-    c: "#3b82f6",
-    d: "#3b82f6",
-    e: "#3b82f6",
+    a: "yellow",
+    b: "yellow",
+    c: "yellow",
+    d: "yellow",
+    e: "yellow",
   },
 }: {
   width?: string;
@@ -70,16 +71,17 @@ export const NumberHeading = ({
           background: "transparent",
           animation: "fadeIn 0.8s ease-out",
         },
-        circle: {
+        box: {
           width: "20px",
           height: "20px",
-          borderRadius: "50%",
           background: `linear-gradient(45deg, ${colors.a} 0%, ${colors.b} 25%, ${colors.c} 50%, ${colors.d} 75%, ${colors.e} 100%)`,
           backgroundSize: "300% 300%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           marginRight: "16px",
+          outline: `${textShadowWidth} solid #000`,
+          marginLeft: "10px",
         },
         number: {
           color: numberColor,
@@ -93,10 +95,11 @@ export const NumberHeading = ({
           color: fontColor,
           fontFamily,
           margin: "0",
+          textShadow: `-${textShadowWidth} -${textShadowWidth} 0 #000, ${textShadowWidth} -${textShadowWidth} 0 #000, -${textShadowWidth} ${textShadowWidth} 0 #000, ${textShadowWidth} ${textShadowWidth} 0 #000`,
         },
       }}
       html={`<div id="container">
-        <div id="circle">
+        <div id="box">
             <span id="number">${number}</span>
         </div>
         <h2 id="text">${text}</h2>
