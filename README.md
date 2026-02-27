@@ -151,7 +151,7 @@ Link
 
 </td><td >
 
-`<UI.Code inline code='console.log()' />`
+`<UI.Link link='#hello' description='Click me' />`
 
 </td><td >
 
@@ -504,7 +504,7 @@ Documentation doesn't have to be boring. Use advanced `UI.Svg` features to creat
                 <div id="badge">NEW FEATURE</div>
                 <h2 style="margin: 0; font-size: 32px">Dynamic SVG Components</h2>
                 <p style="margin: 8px 0 0; opacity: 0.9; font-size: 18px">
-                    Inject raw HTML and CSS into your README with full 
+                    Inject raw HTML and CSS into your README with full
                     animation support and responsive layouts.
                 </p>
             </div>
