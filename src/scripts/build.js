@@ -33,6 +33,7 @@ const main = async () => {
         bin: "./index.js",
         dependencies: {
           prettier: packageJson.devDependencies.prettier || "^3.6.2",
+          typescript: packageJson.devDependencies.typescript || "^5.8.3",
         },
         exports: {
           ".": {
